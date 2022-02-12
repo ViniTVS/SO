@@ -1,7 +1,7 @@
-
+// GRR20186716 Vinícius Teixeira Vieira dos Santos
 #include "queue.h"
 #include <stdio.h>
-#include <stdlib.h>
+
 int queue_size (queue_t *queue){
     // fila vazia?
     if(queue == NULL)
