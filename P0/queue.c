@@ -20,6 +20,21 @@ int queue_size (queue_t *queue){
 }
 
 void queue_print (char *name, queue_t *queue, void print_elem (void*) ){
+    printf("%s", name);
+    if (queue == NULL){
+        printf("\n");
+        return;
+    }
+
+    // percorre fila p/ print
+    queue_t *aux = queue;
+    do{ 
+        print_elem(aux);
+        aux = aux -> next;
+        printf(" ");
+    }while(aux != queue);
+
+    printf("\n");
     return;
 } 
 
@@ -27,25 +42,31 @@ int queue_append (queue_t **queue, queue_t *elem){
     // verifica se fila e elemento existem 
     if (elem == NULL || queue == NULL)
         return -1;
+    // caso o elem já esteja em uma fila
+    if(elem -> prev != NULL || elem -> next != NULL)
+        return -1;
     // caso a fila esteja vazia
     if(*queue == NULL){
+        // elem só precisa apontar p/ si mesmo
         elem->next = elem;
         elem->prev = elem;
         *queue = elem;
         return 0;
     }
-    // caso contrário
-    else{
-        queue_t *aux = *queue;
-        aux -> prev -> next = elem;
-        elem -> prev = aux -> prev;
-        aux -> prev = elem;
-        elem -> next = aux;
-        return 0;
-    }
+    // insere no final da fila
+    queue_t *first = *queue;
+    // arruma ponteiros do que era o último e novo elem
+    first -> prev -> next = elem;
+    elem -> prev = first -> prev;
+    // arruma ponteiros do primeiro e novo elem
+    first -> prev = elem;
+    elem -> next = first;
+    return 0;
+    
 }
 
 int queue_remove (queue_t **queue, queue_t *elem){
+    // verifica se fila e elemento existem 
     if (elem == NULL || queue == NULL)
         return -1;
     // caso a fila esteja vazia
@@ -54,28 +75,36 @@ int queue_remove (queue_t **queue, queue_t *elem){
     // while
 
     queue_t *aux = *queue;
-    printf("primeiro: %p\tRemove: %p \n", aux, elem);
-    // aux = aux -> next;
-    // percorre 
+    
+    // percorre a fila
     do{
-        aux = aux -> next;
+        // encontra elem pra remover
         if(aux == elem){
-            printf("\tAchei elemento pra tirar: %p\n", aux);
-
+            // se os ponteiros do item a ser removida não forem iguais ao do item na fila
+            if (aux -> prev != elem -> prev || aux -> next != elem -> next)
+                return -1;
+            // se a fila tiver um único elemento, a esvazio
+            if(aux -> next == aux){
+                *queue = NULL;
+            } // se tiver mais que um
+            else{
+                // anterior e próximo apontam p/ si mesmos
+                aux -> prev -> next = aux -> next;
+                aux -> next -> prev = aux -> prev;
+                // se eu estiver retirando o primeiro elemento, aponto p/ o seguinte
+                if(aux == *queue)
+                    *queue = aux -> next;
+            }
+            // o elem a ser removido aponta para nada
+            elem -> prev = NULL;
+            elem -> next = NULL;
+            
+            return 0;
         }
-        printf("\t%p \t%p\n", aux, elem);
+
+        aux = aux -> next;
     }while(aux != *queue);
-    exit(0);
-    // caso contrário
-    // else{
-    //     printf("Valor do ponteiro: %p \n", *queue);
-    //     queue_t *aux = *queue;
-    //     aux -> prev -> next = elem;
-    //     elem -> prev = aux -> prev;
-    //     aux -> prev = elem;
-    //     elem -> next = aux;
-    //     return 0;
-    // }
-    return 0;
+    // não encontrou o elemento na fila
+    return -1;
 }
 
