@@ -1,5 +1,5 @@
 main: queue testafila
-	gcc -o queue queue.o testafila.o  -Wall 
+	gcc -o queue queue.o testafila.o -Wall 
 
 testafila: testafila.c
 	gcc -c -o testafila.o testafila.c

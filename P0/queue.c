@@ -20,9 +20,9 @@ int queue_size (queue_t *queue){
 }
 
 void queue_print (char *name, queue_t *queue, void print_elem (void*) ){
-    printf("%s", name);
-    if (queue == NULL){
-        printf("\n");
+    printf("%s: [", name);
+    if (queue == NULL || print_elem == NULL){
+        printf("]\n");
         return;
     }
 
@@ -34,7 +34,7 @@ void queue_print (char *name, queue_t *queue, void print_elem (void*) ){
         printf(" ");
     }while(aux != queue);
 
-    printf("\n");
+    printf("]\n");
     return;
 } 
 
@@ -80,9 +80,6 @@ int queue_remove (queue_t **queue, queue_t *elem){
     do{
         // encontra elem pra remover
         if(aux == elem){
-            // se os ponteiros do item a ser removida não forem iguais ao do item na fila
-            if (aux -> prev != elem -> prev || aux -> next != elem -> next)
-                return -1;
             // se a fila tiver um único elemento, a esvazio
             if(aux -> next == aux){
                 *queue = NULL;
