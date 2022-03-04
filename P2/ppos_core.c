@@ -30,19 +30,20 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
 
     char *stack;
     stack = malloc (STACKSIZE);
-    if (stack){
-        task->context.uc_stack.ss_sp = stack;
-        task->context.uc_stack.ss_size = STACKSIZE;
-        task->context.uc_stack.ss_flags = 0;
-        task->context.uc_link = 0;
-        // Para criar um ID "único", uso o número de tarefas atuais + 1 
-        // (isso pode ocasionar ou não em problemas com overflow)
-	    taskNum++;
-	    task->id = taskNum;
-    } else {
+    // Erro ao alocar
+    if (!stack){
         perror ("Erro na criação da pilha\n");
         return -1;
     }
+    
+    task->context.uc_stack.ss_sp = stack;
+    task->context.uc_stack.ss_size = STACKSIZE;
+    task->context.uc_stack.ss_flags = 0;
+    task->context.uc_link = 0;
+    // Para criar um ID "único", uso o número de tarefas atuais + 1 
+    // (isso pode ocasionar ou não em problemas com overflow)
+    taskNum++;
+    task->id = taskNum;
     // Crio o contexto
     makecontext(&(task->context), (void *)(*start_routine), 1, arg);
     return (task->id);
