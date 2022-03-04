@@ -72,7 +72,6 @@ int queue_remove (queue_t **queue, queue_t *elem){
     // caso a fila esteja vazia
     if(*queue == NULL)
         return -1;
-    // while
 
     queue_t *aux = *queue;
     

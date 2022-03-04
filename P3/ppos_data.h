@@ -53,11 +53,21 @@ typedef struct
   // preencher quando necessário
 } mqueue_t ;
 
-//? Definição de macros próprias
-extern task_t mainTask;
-extern task_t *currentTask;
-extern int taskNum;
 
+//? gerenciamento das tarefas:
+extern task_t mainTask;        // tareda da main 
+extern task_t *currentTask;    // tarefa atual
+extern int userTasks;          // número de tarefas (sem contabilizar a main)
+/* status da tarefa:
+   -1: suspensa
+    0: terminada
+    1: pronta
+*/
+
+//? gerenciamento dispatcher:
+extern task_t dispatcher;      
+extern task_t *dispatcherTask; // tarefa atual do dispatcher
+extern task_t *readyQueue;     // fila de prontas
 
 #endif
 

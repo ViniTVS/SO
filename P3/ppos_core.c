@@ -22,41 +22,46 @@ task_t *readyQueue;     // fila de prontas
 // Política de escalonamento para decidir qual a próxima tarefa a ativar
 task_t *scheduler(){
     #ifdef DEBUG
-        printf("mudou para o scheduler!\n");
+        printf("mudou para o scheduler!  \n");
     #endif
-    task_t *aux;
-    aux = readyQueue;
-    task_t *priorityTask; 
-    priorityTask = readyQueue; // assumo que a tarefa de prioridade é a primeira 
+    task_t *aux = readyQueue;
+    task_t *priorityTask = readyQueue; // assumo que a tarefa de prioridade é a primeira 
+    
     // não temos tarefas prontas
     if (aux == NULL)
         return NULL;
     // iterage para achar a prioridade
-    while(aux -> next != readyQueue){
+    do{
         #ifdef DEBUG
-            printf("Passando pela tarefa %p!\n", &aux);
+            printf("Passando pela tarefa %d do %p\n", aux->id, readyQueue);
         #endif
         
         if ( aux->din_prio < priorityTask->din_prio)
             priorityTask = aux;
-        else if ( // se for igual, define prioridade pelo estático
-            aux->din_prio == priorityTask->din_prio 
-            && aux->static_prio < priorityTask->static_prio
-        )
-            priorityTask = aux;
+        else {// se for igual, define prioridade pelo estático 
+            if ( 
+                aux->din_prio == priorityTask->din_prio 
+                && aux->static_prio < priorityTask->static_prio
+            ){
+                priorityTask = aux;
+            }
+        }
         /*
         // atualizo a prioridade dinâmica
         if (aux->din_prio > -20)
             aux->din_prio--;
         */
         aux = aux -> next;
-    }
+    }while(aux != readyQueue);
     // atualizo a prioridade dinâmica
     for(aux = readyQueue; aux -> next != readyQueue; aux = aux -> next){
         if (aux->din_prio > -20)
             aux->din_prio--;
     } 
 
+    #ifdef DEBUG
+        printf("priorityTask ficou com a: %d\n", priorityTask->id);
+    #endif
     return priorityTask; 
 }
 
@@ -67,16 +72,34 @@ void dispatcher_func(){
     #endif
 
     task_t *nextTask;
-    while(userTasks > 0){
+    while(queue_size((queue_t *) readyQueue) > 0){
         nextTask = scheduler();
         if (nextTask != NULL){
+            if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
+                perror ("Erro ao remover tarefa na fila de prontos\n");
+                exit(-1);        
+            }
             task_switch(nextTask);
+            // se a tarefa foi terminada
+            if (nextTask->status == 0)
+                free(nextTask->context.uc_stack.ss_sp);
         }
     }
 }
 
 void task_yield (){
-    return;
+    
+    if( currentTask != &mainTask && currentTask != &dispatcher )
+        if (queue_append((queue_t **) &readyQueue, (queue_t *)currentTask) < 0){
+            perror ("Erro ao adicionar tarefa na fila de prontos\n");
+            exit(-1);        
+        }
+    
+    #ifdef DEBUG
+        printf("A tarefa %d pediu yield\n", currentTask->id);
+    #endif
+    
+    task_switch(&dispatcher);
 }
 
 
@@ -134,9 +157,12 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     makecontext(&(task->context), (void *)(*start_routine), 1, arg);
     // adiciono à fila de prontos se não for o dispatcher ou a main
     if (task != &dispatcher && task != &mainTask){
-        queue_append((queue_t **) &readyQueue, (queue_t *) task);
+        if (queue_append((queue_t **) &readyQueue, (queue_t *) task) < 0){
+            perror ("Erro ao adicionar tarefa na fila de prontos\n");
+            exit(-1);        
+        }
         #ifdef DEBUG
-            printf("Adicionaei na fila de prontos!\n");
+            printf("Adicionaei %p na fila de prontos %p\n", task, &readyQueue);
         #endif
     }
 
@@ -149,9 +175,22 @@ int task_id(){
 }
 
 void task_exit(int exitCode){
+
+    #ifdef DEBUG
+        printf("Exit tarefa %d\n", currentTask->id);
+    #endif
+
+    currentTask -> status = 0;
     // exitCode: ignorar este parâmetro por enquanto, pois ele somente será usado mais tarde
-    task_switch(&mainTask);
-    currentTask = &mainTask;
+    
+    if(currentTask == &dispatcher){
+        currentTask = &mainTask;
+        task_switch(&mainTask);
+        return;
+    }
+    currentTask = &dispatcher;
+    task_switch(&dispatcher);
+    
 }
 
 int task_switch(task_t *task){
