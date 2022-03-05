@@ -53,10 +53,16 @@ task_t *scheduler(){
         */
         aux = aux -> next;
     }while(aux != readyQueue);
+    
     // atualizo a prioridade dinâmica
-    for(aux = readyQueue; aux -> next != readyQueue; aux = aux -> next){
+    aux = priorityTask -> next;
+    while(aux != priorityTask){
+        #ifdef DEBUG
+            printf("Passando pela tarefa %d do %d\n", aux->id, priorityTask->id);
+        #endif
         if (aux->din_prio > -20)
             aux->din_prio--;
+        aux = aux -> next;
     } 
 
     #ifdef DEBUG
@@ -74,6 +80,7 @@ void dispatcher_func(){
     task_t *nextTask;
     while(queue_size((queue_t *) readyQueue) > 0){
         nextTask = scheduler();
+
         if (nextTask != NULL){
             if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
                 perror ("Erro ao remover tarefa na fila de prontos\n");
@@ -85,6 +92,11 @@ void dispatcher_func(){
                 free(nextTask->context.uc_stack.ss_sp);
         }
     }
+
+        #ifdef DEBUG
+            printf("Buscando nextTask\n");
+        #endif
+    task_exit(0);
 }
 
 void task_yield (){
@@ -102,6 +114,32 @@ void task_yield (){
     task_switch(&dispatcher);
 }
 
+
+void task_setprio (task_t *task, int prio){
+    // if (prio > 20 || prio < -20)
+    //     return;
+
+
+    if (task != NULL){
+        #ifdef DEBUG
+            printf("task_setprio da %d\n\tde: %d para: %d\n\n", task->id, task->static_prio, prio);
+        #endif
+        task -> static_prio = prio;
+        task -> din_prio = prio;
+    }
+    else{
+        currentTask -> static_prio = prio;
+        currentTask -> din_prio = prio;
+    }
+}
+
+int task_getprio (task_t *task){
+    
+    if (task == NULL)
+        return currentTask -> id;
+    
+    return task -> static_prio;
+}
 
 void ppos_init(){
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
@@ -171,7 +209,7 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
 
 
 int task_id(){
-    return(currentTask->id);
+    return (currentTask->id);
 }
 
 void task_exit(int exitCode){
@@ -181,16 +219,13 @@ void task_exit(int exitCode){
     #endif
 
     currentTask -> status = 0;
-    // exitCode: ignorar este parâmetro por enquanto, pois ele somente será usado mais tarde
     
     if(currentTask == &dispatcher){
-        currentTask = &mainTask;
+        free (dispatcher.context.uc_stack.ss_sp);
         task_switch(&mainTask);
         return;
     }
-    currentTask = &dispatcher;
     task_switch(&dispatcher);
-    
 }
 
 int task_switch(task_t *task){
@@ -198,14 +233,18 @@ int task_switch(task_t *task){
         perror ("Erro na troca da tarefa\n");
         return -1;
     }
+
+    #ifdef DEBUG
+        printf("Switch da tarefa %d para %d \n", currentTask->id, task -> id);
+    #endif
+
     /* Isso não funciona :(
     // Faço a troca de contexto
 	swapcontext (&currentTask->context, &task->context);
     // e atualizo a tarefa atual
 	currentTask = task;
     */
-	task_t *aux;
-	aux = currentTask;
+	task_t *aux = currentTask;
 	currentTask = task;
 	swapcontext (&aux->context, &task->context);
 
