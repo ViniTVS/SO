@@ -33,26 +33,26 @@ task_t *scheduler(){
         return NULL;
     // iterage para achar a tareda de menor prioridade
     do{
-        if ( aux -> din_prio < priorityTask -> din_prio)
+        if ( aux->din_prio < priorityTask->din_prio)
             priorityTask = aux;
         // se for igual, define prioridade pelo valor estático
-        else if ( aux -> din_prio == priorityTask -> din_prio && aux -> static_prio < priorityTask -> static_prio)
+        else if ( aux->din_prio == priorityTask->din_prio && aux->static_prio < priorityTask->static_prio)
             priorityTask = aux;
         
-        aux = aux -> next;
+        aux = aux->next;
     }while(aux != readyQueue);
     
     // atualizo a prioridade dinâmica
-    aux = priorityTask -> next;
+    aux = priorityTask->next;
     
     while(aux != priorityTask){
-        if (aux -> din_prio > -20)
-            aux -> din_prio--;
-        aux = aux -> next;
+        if (aux->din_prio > -20)
+            aux->din_prio--;
+        aux = aux->next;
     } 
 
     // como a tarefa será executada, din_prio volta a ser igual à static
-    priorityTask -> din_prio = priorityTask -> static_prio;
+    priorityTask->din_prio = priorityTask->static_prio;
 
     return priorityTask; 
 }
@@ -70,8 +70,8 @@ void dispatcher_func(){
             }
             task_switch(nextTask);
             // se a tarefa foi terminada, libero a mem. alocada pelo contexto 
-            if (nextTask -> status == 0)
-                free(nextTask -> context.uc_stack.ss_sp);
+            if (nextTask->status == 0)
+                free(nextTask->context.uc_stack.ss_sp);
         }
     }
 
@@ -81,6 +81,9 @@ void dispatcher_func(){
 void task_yield (){
     
     if( currentTask != &mainTask && currentTask != &dispatcher ){
+        #ifdef DEBUG
+            printf("%d é tarefa do usuário \n", currentTask->id);
+        #endif
         if (queue_append((queue_t **) &readyQueue, (queue_t *)currentTask) < 0){
             perror ("Erro ao adicionar tarefa na fila de prontos\n");
             exit(-1);        
@@ -89,28 +92,27 @@ void task_yield (){
     task_switch(&dispatcher);
 }
 
-
 void task_setprio (task_t *task, int prio){
     // ignoro se a prioridade não for dentro do limite
     if (prio > 20 || prio < -20)
         return;
 
     if (task != NULL){
-        task -> static_prio = prio;
-        task -> din_prio = prio;
+        task->static_prio = prio;
+        task->din_prio = prio;
     }
     else{
-        currentTask -> static_prio = prio;
-        currentTask -> din_prio = prio;
+        currentTask->static_prio = prio;
+        currentTask->din_prio = prio;
     }
 }
 
 int task_getprio (task_t *task){
     
     if (task == NULL)
-        return currentTask -> static_prio;
+        return currentTask->static_prio;
     
-    return task -> static_prio;
+    return task->static_prio;
 }
 
 unsigned int systime () {
@@ -124,7 +126,7 @@ void tratador (){
         return;
 
     if(currentTask->quantum == 0){
-        currentTask->exec_time += systime() - startTime;
+        currentTask->cpu_time += systime() - startTime;
         task_yield();
     } else {
         currentTask->quantum--;
@@ -217,7 +219,9 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     makecontext(&(task->context), (void *)(*start_routine), 1, arg);
     // adiciono à fila de prontos se não for o dispatcher ou a main
     if (task != &dispatcher && task != &mainTask){
-
+        #ifdef DEBUG
+            printf("%d é tarefa do usuário \n", task->id);
+        #endif
         task->quantum = QUANTUM_TICKS; // ajusto quantum pra tarefa do usuário
 
         if (queue_append((queue_t **) &readyQueue, (queue_t *) task) < 0){
@@ -235,8 +239,11 @@ int task_id(){
 }
 
 void task_exit(int exitCode){
-    currentTask -> status = 0;
+    currentTask->status = 0;
     currentTask->exec_time = systime() - currentTask->exec_time;
+    
+    printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
+	    currentTask->id, currentTask->exec_time, currentTask->cpu_time, currentTask->activations);
     // se a tarefa sendo finalizada for o dispatcher, volto pra main
     if(currentTask == &dispatcher){
         free (dispatcher.context.uc_stack.ss_sp);
@@ -253,10 +260,15 @@ int task_switch(task_t *task){
     }
     
     currentTask->activations++;
+    startTime = systime();
     if (currentTask->sys_task != 1){
         currentTask->quantum = QUANTUM_TICKS;
     }
-	
+	else {
+        #ifdef DEBUG
+            printf("%d é tarefa do usuário \n", task->id);
+        #endif
+    }
     task_t *aux = currentTask;
 	currentTask = task;
 	swapcontext (&aux->context, &task->context);
