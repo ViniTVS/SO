@@ -18,7 +18,10 @@ int userTasks;          // número de tarefas (sem contabilizar a main)
 task_t dispatcher;      
 task_t *dispatcherTask; // tarefa atual do dispatcher
 task_t *readyQueue;     // fila de prontas
-
+//? gerenciamento do tempo:
+unsigned int time = 0, startTime = 0;  
+struct sigaction action ;
+struct itimerval timer;
 
 // Política de escalonamento para decidir qual a próxima tarefa a ativar
 task_t *scheduler(){
@@ -110,6 +113,26 @@ int task_getprio (task_t *task){
     return task -> static_prio;
 }
 
+unsigned int systime () {
+	return time;
+}
+
+
+void tratador (){
+    // ignoro se é uma tarefa de sistema 
+    if (currentTask->sys_task == 1)
+        return;
+
+    if(currentTask->quantum == 0){
+        currentTask->exec_time += systime() - startTime;
+        task_yield();
+    } else {
+        currentTask->quantum--;
+    }
+
+    time++;
+}
+
 void ppos_init(){
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0);
@@ -118,11 +141,38 @@ void ppos_init(){
     mainTask.prev = NULL;
     mainTask.id = 0;    // id 0 por ser main    
     userTasks = 0;    // número de tarefas existentes além da main
-
+    time = 0;           // tempo de execução começa a contar aqui
+    // temporizadores
+    mainTask.exec_time = systime();
+    mainTask.cpu_time = 0;
+    mainTask.activations = 0;
+    mainTask.sys_task = 1;  // é uma tarefa de sistema
     // Define a tarefa atual sendo a main 
     currentTask = &mainTask;
     // cria o dispatcher:
     task_create(&dispatcher,(void*) dispatcher_func, NULL);
+
+    // registra a ação para o sinal de timer SIGALRM
+    action.sa_handler = tratador ;
+    sigemptyset (&action.sa_mask) ;
+    action.sa_flags = 0 ;
+    if (sigaction (SIGALRM, &action, 0) < 0){
+        perror ("Erro em sigaction: ") ;
+        exit (1) ;
+    }
+
+    // ajusta valores do temporizador
+    timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
+    timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
+    timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
+    timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+
+    // arma o temporizador ITIMER_REAL (vide man setitimer)
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
+    {
+        perror ("Erro em setitimer: ") ;
+        exit (1) ;
+    }
     
 }
 
@@ -152,6 +202,12 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     task->static_prio = 0;
     task->din_prio = 0;
     task->status = 1;
+    // temporizadores
+    task->exec_time = systime();
+    task->cpu_time = 0;
+    task->activations = 0;
+    task->sys_task = 0;  // é uma tarefa do usuário
+    task->quantum = 0;  // presumo primeiro que a tarefa é do sistema
 
     // Para criar um ID "único", uso o número de tarefas atuais + 1 
     // (isso pode ocasionar ou não em problemas com overflow)
@@ -161,6 +217,9 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     makecontext(&(task->context), (void *)(*start_routine), 1, arg);
     // adiciono à fila de prontos se não for o dispatcher ou a main
     if (task != &dispatcher && task != &mainTask){
+
+        task->quantum = QUANTUM_TICKS; // ajusto quantum pra tarefa do usuário
+
         if (queue_append((queue_t **) &readyQueue, (queue_t *) task) < 0){
             perror ("Erro ao adicionar tarefa na fila de prontos\n");
             exit(-1);        
@@ -177,6 +236,7 @@ int task_id(){
 
 void task_exit(int exitCode){
     currentTask -> status = 0;
+    currentTask->exec_time = systime() - currentTask->exec_time;
     // se a tarefa sendo finalizada for o dispatcher, volto pra main
     if(currentTask == &dispatcher){
         free (dispatcher.context.uc_stack.ss_sp);
@@ -192,7 +252,12 @@ int task_switch(task_t *task){
         return -1;
     }
     
-	task_t *aux = currentTask;
+    currentTask->activations++;
+    if (currentTask->sys_task != 1){
+        currentTask->quantum = QUANTUM_TICKS;
+    }
+	
+    task_t *aux = currentTask;
 	currentTask = task;
 	swapcontext (&aux->context, &task->context);
 
