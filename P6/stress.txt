@@ -1,0 +1,3003 @@
+main: inicio
+Creating task 2
+Creating task 3
+Creating task 4
+Creating task 5
+Creating task 6
+Creating task 7
+Creating task 8
+Creating task 9
+Creating task 10
+Creating task 11
+Creating task 12
+Creating task 13
+Creating task 14
+Creating task 15
+Creating task 16
+Creating task 17
+Creating task 18
+Creating task 19
+Creating task 20
+Creating task 21
+Creating task 22
+Creating task 23
+Creating task 24
+Creating task 25
+Creating task 26
+Creating task 27
+Creating task 28
+Creating task 29
+Creating task 30
+Creating task 31
+Creating task 32
+Creating task 33
+Creating task 34
+Creating task 35
+Creating task 36
+Creating task 37
+Creating task 38
+Creating task 39
+Creating task 40
+Creating task 41
+Creating task 42
+Creating task 43
+Creating task 44
+Creating task 45
+Creating task 46
+Creating task 47
+Creating task 48
+Creating task 49
+Creating task 50
+Creating task 51
+Creating task 52
+Creating task 53
+Creating task 54
+Creating task 55
+Creating task 56
+Creating task 57
+Creating task 58
+Creating task 59
+Creating task 60
+Creating task 61
+Creating task 62
+Creating task 63
+Creating task 64
+Creating task 65
+Creating task 66
+Creating task 67
+Creating task 68
+Creating task 69
+Creating task 70
+Creating task 71
+Creating task 72
+Creating task 73
+Creating task 74
+Creating task 75
+Creating task 76
+Creating task 77
+Creating task 78
+Creating task 79
+Creating task 80
+Creating task 81
+Creating task 82
+Creating task 83
+Creating task 84
+Creating task 85
+Creating task 86
+Creating task 87
+Creating task 88
+Creating task 89
+Creating task 90
+Creating task 91
+Creating task 92
+Creating task 93
+Creating task 94
+Creating task 95
+Creating task 96
+Creating task 97
+Creating task 98
+Creating task 99
+Creating task 100
+Creating task 101
+Creating task 102
+Creating task 103
+Creating task 104
+Creating task 105
+Creating task 106
+Creating task 107
+Creating task 108
+Creating task 109
+Creating task 110
+Creating task 111
+Creating task 112
+Creating task 113
+Creating task 114
+Creating task 115
+Creating task 116
+Creating task 117
+Creating task 118
+Creating task 119
+Creating task 120
+Creating task 121
+Creating task 122
+Creating task 123
+Creating task 124
+Creating task 125
+Creating task 126
+Creating task 127
+Creating task 128
+Creating task 129
+Creating task 130
+Creating task 131
+Creating task 132
+Creating task 133
+Creating task 134
+Creating task 135
+Creating task 136
+Creating task 137
+Creating task 138
+Creating task 139
+Creating task 140
+Creating task 141
+Creating task 142
+Creating task 143
+Creating task 144
+Creating task 145
+Creating task 146
+Creating task 147
+Creating task 148
+Creating task 149
+Creating task 150
+Creating task 151
+Creating task 152
+Creating task 153
+Creating task 154
+Creating task 155
+Creating task 156
+Creating task 157
+Creating task 158
+Creating task 159
+Creating task 160
+Creating task 161
+Creating task 162
+Creating task 163
+Creating task 164
+Creating task 165
+Creating task 166
+Creating task 167
+Creating task 168
+Creating task 169
+Creating task 170
+Creating task 171
+Creating task 172
+Creating task 173
+Creating task 174
+Creating task 175
+Creating task 176
+Creating task 177
+Creating task 178
+Creating task 179
+Creating task 180
+Creating task 181
+Creating task 182
+Creating task 183
+Creating task 184
+Creating task 185
+Creating task 186
+Creating task 187
+Creating task 188
+Creating task 189
+Creating task 190
+Creating task 191
+Creating task 192
+Creating task 193
+Creating task 194
+Creating task 195
+Creating task 196
+Creating task 197
+Creating task 198
+Creating task 199
+Creating task 200
+Creating task 201
+Creating task 202
+Creating task 203
+Creating task 204
+Creating task 205
+Creating task 206
+Creating task 207
+Creating task 208
+Creating task 209
+Creating task 210
+Creating task 211
+Creating task 212
+Creating task 213
+Creating task 214
+Creating task 215
+Creating task 216
+Creating task 217
+Creating task 218
+Creating task 219
+Creating task 220
+Creating task 221
+Creating task 222
+Creating task 223
+Creating task 224
+Creating task 225
+Creating task 226
+Creating task 227
+Creating task 228
+Creating task 229
+Creating task 230
+Creating task 231
+Creating task 232
+Creating task 233
+Creating task 234
+Creating task 235
+Creating task 236
+Creating task 237
+Creating task 238
+Creating task 239
+Creating task 240
+Creating task 241
+Creating task 242
+Creating task 243
+Creating task 244
+Creating task 245
+Creating task 246
+Creating task 247
+Creating task 248
+Creating task 249
+Creating task 250
+Creating task 251
+Creating task 252
+Creating task 253
+Creating task 254
+Creating task 255
+Creating task 256
+Creating task 257
+Creating task 258
+Creating task 259
+Creating task 260
+Creating task 261
+Creating task 262
+Creating task 263
+Creating task 264
+Creating task 265
+Creating task 266
+Creating task 267
+Creating task 268
+Creating task 269
+Creating task 270
+Creating task 271
+Creating task 272
+Creating task 273
+Creating task 274
+Creating task 275
+Creating task 276
+Creating task 277
+Creating task 278
+Creating task 279
+Creating task 280
+Creating task 281
+Creating task 282
+Creating task 283
+Creating task 284
+Creating task 285
+Creating task 286
+Creating task 287
+Creating task 288
+Creating task 289
+Creating task 290
+Creating task 291
+Creating task 292
+Creating task 293
+Creating task 294
+Creating task 295
+Creating task 296
+Creating task 297
+Creating task 298
+Creating task 299
+Creating task 300
+Creating task 301
+Creating task 302
+Creating task 303
+Creating task 304
+Creating task 305
+Creating task 306
+Creating task 307
+Creating task 308
+Creating task 309
+Creating task 310
+Creating task 311
+Creating task 312
+Creating task 313
+Creating task 314
+Creating task 315
+Creating task 316
+Creating task 317
+Creating task 318
+Creating task 319
+Creating task 320
+Creating task 321
+Creating task 322
+Creating task 323
+Creating task 324
+Creating task 325
+Creating task 326
+Creating task 327
+Creating task 328
+Creating task 329
+Creating task 330
+Creating task 331
+Creating task 332
+Creating task 333
+Creating task 334
+Creating task 335
+Creating task 336
+Creating task 337
+Creating task 338
+Creating task 339
+Creating task 340
+Creating task 341
+Creating task 342
+Creating task 343
+Creating task 344
+Creating task 345
+Creating task 346
+Creating task 347
+Creating task 348
+Creating task 349
+Creating task 350
+Creating task 351
+Creating task 352
+Creating task 353
+Creating task 354
+Creating task 355
+Creating task 356
+Creating task 357
+Creating task 358
+Creating task 359
+Creating task 360
+Creating task 361
+Creating task 362
+Creating task 363
+Creating task 364
+Creating task 365
+Creating task 366
+Creating task 367
+Creating task 368
+Creating task 369
+Creating task 370
+Creating task 371
+Creating task 372
+Creating task 373
+Creating task 374
+Creating task 375
+Creating task 376
+Creating task 377
+Creating task 378
+Creating task 379
+Creating task 380
+Creating task 381
+Creating task 382
+Creating task 383
+Creating task 384
+Creating task 385
+Creating task 386
+Creating task 387
+Creating task 388
+Creating task 389
+Creating task 390
+Creating task 391
+Creating task 392
+Creating task 393
+Creating task 394
+Creating task 395
+Creating task 396
+Creating task 397
+Creating task 398
+Creating task 399
+Creating task 400
+Creating task 401
+Creating task 402
+Creating task 403
+Creating task 404
+Creating task 405
+Creating task 406
+Creating task 407
+Creating task 408
+Creating task 409
+Creating task 410
+Creating task 411
+Creating task 412
+Creating task 413
+Creating task 414
+Creating task 415
+Creating task 416
+Creating task 417
+Creating task 418
+Creating task 419
+Creating task 420
+Creating task 421
+Creating task 422
+Creating task 423
+Creating task 424
+Creating task 425
+Creating task 426
+Creating task 427
+Creating task 428
+Creating task 429
+Creating task 430
+Creating task 431
+Creating task 432
+Creating task 433
+Creating task 434
+Creating task 435
+Creating task 436
+Creating task 437
+Creating task 438
+Creating task 439
+Creating task 440
+Creating task 441
+Creating task 442
+Creating task 443
+Creating task 444
+Creating task 445
+Creating task 446
+Creating task 447
+Creating task 448
+Creating task 449
+Creating task 450
+Creating task 451
+Creating task 452
+Creating task 453
+Creating task 454
+Creating task 455
+Creating task 456
+Creating task 457
+Creating task 458
+Creating task 459
+Creating task 460
+Creating task 461
+Creating task 462
+Creating task 463
+Creating task 464
+Creating task 465
+Creating task 466
+Creating task 467
+Creating task 468
+Creating task 469
+Creating task 470
+Creating task 471
+Creating task 472
+Creating task 473
+Creating task 474
+Creating task 475
+Creating task 476
+Creating task 477
+Creating task 478
+Creating task 479
+Creating task 480
+Creating task 481
+Creating task 482
+Creating task 483
+Creating task 484
+Creating task 485
+Creating task 486
+Creating task 487
+Creating task 488
+Creating task 489
+Creating task 490
+Creating task 491
+Creating task 492
+Creating task 493
+Creating task 494
+Creating task 495
+Creating task 496
+Creating task 497
+Creating task 498
+Creating task 499
+Creating task 500
+Creating task 501
+task   2: i=0
+task   2: i=1
+task   2: i=2
+task   2: fim
+Task 2 exit: execution time 207 ms, processor time 0 ms, 0 activations
+task   3: i=0
+task   3: i=1
+task   3: i=2
+task   3: fim
+Task 3 exit: execution time 415 ms, processor time 0 ms, 0 activations
+task   4: i=0
+task   4: i=1
+task   4: i=2
+task   4: fim
+Task 4 exit: execution time 628 ms, processor time 0 ms, 0 activations
+task   5: i=0
+task   5: i=1
+task   5: i=2
+task   5: fim
+Task 5 exit: execution time 842 ms, processor time 0 ms, 0 activations
+task   6: i=0
+task   6: i=1
+task   6: i=2
+task   6: fim
+Task 6 exit: execution time 1054 ms, processor time 0 ms, 0 activations
+task   7: i=0
+task   7: i=1
+task   7: i=2
+task   7: fim
+Task 7 exit: execution time 1264 ms, processor time 0 ms, 0 activations
+task   8: i=0
+task   8: i=1
+task   8: i=2
+task   8: fim
+Task 8 exit: execution time 1481 ms, processor time 0 ms, 0 activations
+task   9: i=0
+task   9: i=1
+task   9: i=2
+task   9: fim
+Task 9 exit: execution time 1691 ms, processor time 0 ms, 0 activations
+task  10: i=0
+task  10: i=1
+task  10: i=2
+task  10: fim
+Task 10 exit: execution time 1899 ms, processor time 0 ms, 0 activations
+task  11: i=0
+task  11: i=1
+task  11: i=2
+task  11: fim
+Task 11 exit: execution time 2114 ms, processor time 0 ms, 0 activations
+task  12: i=0
+task  12: i=1
+task  12: i=2
+task  12: fim
+Task 12 exit: execution time 2328 ms, processor time 0 ms, 0 activations
+task  13: i=0
+task  13: i=1
+task  13: i=2
+task  13: fim
+Task 13 exit: execution time 2542 ms, processor time 0 ms, 0 activations
+task  14: i=0
+task  14: i=1
+task  14: i=2
+task  14: fim
+Task 14 exit: execution time 2748 ms, processor time 0 ms, 0 activations
+task  15: i=0
+task  15: i=1
+task  15: i=2
+task  15: fim
+Task 15 exit: execution time 2961 ms, processor time 0 ms, 0 activations
+task  16: i=0
+task  16: i=1
+task  16: i=2
+task  16: fim
+Task 16 exit: execution time 3175 ms, processor time 0 ms, 0 activations
+task  17: i=0
+task  17: i=1
+task  17: i=2
+task  17: fim
+Task 17 exit: execution time 3390 ms, processor time 0 ms, 0 activations
+task  18: i=0
+task  18: i=1
+task  18: i=2
+task  18: fim
+Task 18 exit: execution time 3607 ms, processor time 0 ms, 0 activations
+task  19: i=0
+task  19: i=1
+task  19: i=2
+task  19: fim
+Task 19 exit: execution time 3819 ms, processor time 0 ms, 0 activations
+task  20: i=0
+task  20: i=1
+task  20: i=2
+task  20: fim
+Task 20 exit: execution time 4026 ms, processor time 0 ms, 0 activations
+task  21: i=0
+task  21: i=1
+task  21: i=2
+task  21: fim
+Task 21 exit: execution time 4242 ms, processor time 0 ms, 0 activations
+task  22: i=0
+task  22: i=1
+task  22: i=2
+task  22: fim
+Task 22 exit: execution time 4458 ms, processor time 0 ms, 0 activations
+task  23: i=0
+task  23: i=1
+task  23: i=2
+task  23: fim
+Task 23 exit: execution time 4673 ms, processor time 0 ms, 0 activations
+task  24: i=0
+task  24: i=1
+task  24: i=2
+task  24: fim
+Task 24 exit: execution time 4890 ms, processor time 0 ms, 0 activations
+task  25: i=0
+task  25: i=1
+task  25: i=2
+task  25: fim
+Task 25 exit: execution time 5106 ms, processor time 0 ms, 0 activations
+task  26: i=0
+task  26: i=1
+task  26: i=2
+task  26: fim
+Task 26 exit: execution time 5319 ms, processor time 0 ms, 0 activations
+task  27: i=0
+task  27: i=1
+task  27: i=2
+task  27: fim
+Task 27 exit: execution time 5538 ms, processor time 0 ms, 0 activations
+task  28: i=0
+task  28: i=1
+task  28: i=2
+task  28: fim
+Task 28 exit: execution time 5757 ms, processor time 0 ms, 0 activations
+task  29: i=0
+task  29: i=1
+task  29: i=2
+task  29: fim
+Task 29 exit: execution time 5975 ms, processor time 0 ms, 0 activations
+task  30: i=0
+task  30: i=1
+task  30: i=2
+task  30: fim
+Task 30 exit: execution time 6194 ms, processor time 0 ms, 0 activations
+task  31: i=0
+task  31: i=1
+task  31: i=2
+task  31: fim
+Task 31 exit: execution time 6410 ms, processor time 0 ms, 0 activations
+task  32: i=0
+task  32: i=1
+task  32: i=2
+task  32: fim
+Task 32 exit: execution time 6629 ms, processor time 0 ms, 0 activations
+task  33: i=0
+task  33: i=1
+task  33: i=2
+task  33: fim
+Task 33 exit: execution time 6847 ms, processor time 0 ms, 0 activations
+task  34: i=0
+task  34: i=1
+task  34: i=2
+task  34: fim
+Task 34 exit: execution time 7068 ms, processor time 0 ms, 0 activations
+task  35: i=0
+task  35: i=1
+task  35: i=2
+task  35: fim
+Task 35 exit: execution time 7285 ms, processor time 0 ms, 0 activations
+task  36: i=0
+task  36: i=1
+task  36: i=2
+task  36: fim
+Task 36 exit: execution time 7502 ms, processor time 0 ms, 0 activations
+task  37: i=0
+task  37: i=1
+task  37: i=2
+task  37: fim
+Task 37 exit: execution time 7724 ms, processor time 0 ms, 0 activations
+task  38: i=0
+task  38: i=1
+task  38: i=2
+task  38: fim
+Task 38 exit: execution time 7946 ms, processor time 0 ms, 0 activations
+task  39: i=0
+task  39: i=1
+task  39: i=2
+task  39: fim
+Task 39 exit: execution time 8160 ms, processor time 0 ms, 0 activations
+task  40: i=0
+task  40: i=1
+task  40: i=2
+task  40: fim
+Task 40 exit: execution time 8371 ms, processor time 0 ms, 0 activations
+task  41: i=0
+task  41: i=1
+task  41: i=2
+task  41: fim
+Task 41 exit: execution time 8589 ms, processor time 0 ms, 0 activations
+task  42: i=0
+task  42: i=1
+task  42: i=2
+task  42: fim
+Task 42 exit: execution time 8803 ms, processor time 0 ms, 0 activations
+task  43: i=0
+task  43: i=1
+task  43: i=2
+task  43: fim
+Task 43 exit: execution time 9024 ms, processor time 0 ms, 0 activations
+task  44: i=0
+task  44: i=1
+task  44: i=2
+task  44: fim
+Task 44 exit: execution time 9238 ms, processor time 0 ms, 0 activations
+task  45: i=0
+task  45: i=1
+task  45: i=2
+task  45: fim
+Task 45 exit: execution time 9447 ms, processor time 0 ms, 0 activations
+task  46: i=0
+task  46: i=1
+task  46: i=2
+task  46: fim
+Task 46 exit: execution time 9661 ms, processor time 0 ms, 0 activations
+task  47: i=0
+task  47: i=1
+task  47: i=2
+task  47: fim
+Task 47 exit: execution time 9874 ms, processor time 0 ms, 0 activations
+task  48: i=0
+task  48: i=1
+task  48: i=2
+task  48: fim
+Task 48 exit: execution time 10087 ms, processor time 0 ms, 0 activations
+task  49: i=0
+task  49: i=1
+task  49: i=2
+task  49: fim
+Task 49 exit: execution time 10305 ms, processor time 0 ms, 0 activations
+task  50: i=0
+task  50: i=1
+task  50: i=2
+task  50: fim
+Task 50 exit: execution time 10524 ms, processor time 0 ms, 0 activations
+task  51: i=0
+task  51: i=1
+task  51: i=2
+task  51: fim
+Task 51 exit: execution time 10738 ms, processor time 0 ms, 0 activations
+task  52: i=0
+task  52: i=1
+task  52: i=2
+task  52: fim
+Task 52 exit: execution time 10956 ms, processor time 0 ms, 0 activations
+task  53: i=0
+task  53: i=1
+task  53: i=2
+task  53: fim
+Task 53 exit: execution time 11174 ms, processor time 0 ms, 0 activations
+task  54: i=0
+task  54: i=1
+task  54: i=2
+task  54: fim
+Task 54 exit: execution time 11387 ms, processor time 0 ms, 0 activations
+task  55: i=0
+task  55: i=1
+task  55: i=2
+task  55: fim
+Task 55 exit: execution time 11604 ms, processor time 0 ms, 0 activations
+task  56: i=0
+task  56: i=1
+task  56: i=2
+task  56: fim
+Task 56 exit: execution time 11813 ms, processor time 0 ms, 0 activations
+task  57: i=0
+task  57: i=1
+task  57: i=2
+task  57: fim
+Task 57 exit: execution time 12026 ms, processor time 0 ms, 0 activations
+task  58: i=0
+task  58: i=1
+task  58: i=2
+task  58: fim
+Task 58 exit: execution time 12242 ms, processor time 0 ms, 0 activations
+task  59: i=0
+task  59: i=1
+task  59: i=2
+task  59: fim
+Task 59 exit: execution time 12456 ms, processor time 0 ms, 0 activations
+task  60: i=0
+task  60: i=1
+task  60: i=2
+task  60: fim
+Task 60 exit: execution time 12670 ms, processor time 0 ms, 0 activations
+task  61: i=0
+task  61: i=1
+task  61: i=2
+task  61: fim
+Task 61 exit: execution time 12881 ms, processor time 0 ms, 0 activations
+task  62: i=0
+task  62: i=1
+task  62: i=2
+task  62: fim
+Task 62 exit: execution time 13094 ms, processor time 0 ms, 0 activations
+task  63: i=0
+task  63: i=1
+task  63: i=2
+task  63: fim
+Task 63 exit: execution time 13310 ms, processor time 0 ms, 0 activations
+task  64: i=0
+task  64: i=1
+task  64: i=2
+task  64: fim
+Task 64 exit: execution time 13528 ms, processor time 0 ms, 0 activations
+task  65: i=0
+task  65: i=1
+task  65: i=2
+task  65: fim
+Task 65 exit: execution time 13744 ms, processor time 0 ms, 0 activations
+task  66: i=0
+task  66: i=1
+task  66: i=2
+task  66: fim
+Task 66 exit: execution time 13962 ms, processor time 0 ms, 0 activations
+task  67: i=0
+task  67: i=1
+task  67: i=2
+task  67: fim
+Task 67 exit: execution time 14182 ms, processor time 0 ms, 0 activations
+task  68: i=0
+task  68: i=1
+task  68: i=2
+task  68: fim
+Task 68 exit: execution time 14402 ms, processor time 0 ms, 0 activations
+task  69: i=0
+task  69: i=1
+task  69: i=2
+task  69: fim
+Task 69 exit: execution time 14615 ms, processor time 0 ms, 0 activations
+task  70: i=0
+task  70: i=1
+task  70: i=2
+task  70: fim
+Task 70 exit: execution time 14829 ms, processor time 0 ms, 0 activations
+task  71: i=0
+task  71: i=1
+task  71: i=2
+task  71: fim
+Task 71 exit: execution time 15046 ms, processor time 0 ms, 0 activations
+task  72: i=0
+task  72: i=1
+task  72: i=2
+task  72: fim
+Task 72 exit: execution time 15259 ms, processor time 0 ms, 0 activations
+task  73: i=0
+task  73: i=1
+task  73: i=2
+task  73: fim
+Task 73 exit: execution time 15475 ms, processor time 0 ms, 0 activations
+task  74: i=0
+task  74: i=1
+task  74: i=2
+task  74: fim
+Task 74 exit: execution time 15695 ms, processor time 0 ms, 0 activations
+task  75: i=0
+task  75: i=1
+task  75: i=2
+task  75: fim
+Task 75 exit: execution time 15915 ms, processor time 0 ms, 0 activations
+task  76: i=0
+task  76: i=1
+task  76: i=2
+task  76: fim
+Task 76 exit: execution time 16135 ms, processor time 0 ms, 0 activations
+task  77: i=0
+task  77: i=1
+task  77: i=2
+task  77: fim
+Task 77 exit: execution time 16353 ms, processor time 0 ms, 0 activations
+task  78: i=0
+task  78: i=1
+task  78: i=2
+task  78: fim
+Task 78 exit: execution time 16567 ms, processor time 0 ms, 0 activations
+task  79: i=0
+task  79: i=1
+task  79: i=2
+task  79: fim
+Task 79 exit: execution time 16784 ms, processor time 0 ms, 0 activations
+task  80: i=0
+task  80: i=1
+task  80: i=2
+task  80: fim
+Task 80 exit: execution time 17001 ms, processor time 0 ms, 0 activations
+task  81: i=0
+task  81: i=1
+task  81: i=2
+task  81: fim
+Task 81 exit: execution time 17217 ms, processor time 0 ms, 0 activations
+task  82: i=0
+task  82: i=1
+task  82: i=2
+task  82: fim
+Task 82 exit: execution time 17434 ms, processor time 0 ms, 0 activations
+task  83: i=0
+task  83: i=1
+task  83: i=2
+task  83: fim
+Task 83 exit: execution time 17653 ms, processor time 0 ms, 0 activations
+task  84: i=0
+task  84: i=1
+task  84: i=2
+task  84: fim
+Task 84 exit: execution time 17875 ms, processor time 0 ms, 0 activations
+task  85: i=0
+task  85: i=1
+task  85: i=2
+task  85: fim
+Task 85 exit: execution time 18098 ms, processor time 0 ms, 0 activations
+task  86: i=0
+task  86: i=1
+task  86: i=2
+task  86: fim
+Task 86 exit: execution time 18316 ms, processor time 0 ms, 0 activations
+task  87: i=0
+task  87: i=1
+task  87: i=2
+task  87: fim
+Task 87 exit: execution time 18532 ms, processor time 0 ms, 0 activations
+task  88: i=0
+task  88: i=1
+task  88: i=2
+task  88: fim
+Task 88 exit: execution time 18741 ms, processor time 0 ms, 0 activations
+task  89: i=0
+task  89: i=1
+task  89: i=2
+task  89: fim
+Task 89 exit: execution time 18947 ms, processor time 0 ms, 0 activations
+task  90: i=0
+task  90: i=1
+task  90: i=2
+task  90: fim
+Task 90 exit: execution time 19157 ms, processor time 0 ms, 0 activations
+task  91: i=0
+task  91: i=1
+task  91: i=2
+task  91: fim
+Task 91 exit: execution time 19370 ms, processor time 0 ms, 0 activations
+task  92: i=0
+task  92: i=1
+task  92: i=2
+task  92: fim
+Task 92 exit: execution time 19582 ms, processor time 0 ms, 0 activations
+task  93: i=0
+task  93: i=1
+task  93: i=2
+task  93: fim
+Task 93 exit: execution time 19794 ms, processor time 0 ms, 0 activations
+task  94: i=0
+task  94: i=1
+task  94: i=2
+task  94: fim
+Task 94 exit: execution time 20005 ms, processor time 0 ms, 0 activations
+task  95: i=0
+task  95: i=1
+task  95: i=2
+task  95: fim
+Task 95 exit: execution time 20215 ms, processor time 0 ms, 0 activations
+task  96: i=0
+task  96: i=1
+task  96: i=2
+task  96: fim
+Task 96 exit: execution time 20427 ms, processor time 0 ms, 0 activations
+task  97: i=0
+task  97: i=1
+task  97: i=2
+task  97: fim
+Task 97 exit: execution time 20637 ms, processor time 0 ms, 0 activations
+task  98: i=0
+task  98: i=1
+task  98: i=2
+task  98: fim
+Task 98 exit: execution time 20850 ms, processor time 0 ms, 0 activations
+task  99: i=0
+task  99: i=1
+task  99: i=2
+task  99: fim
+Task 99 exit: execution time 21058 ms, processor time 0 ms, 0 activations
+task 100: i=0
+task 100: i=1
+task 100: i=2
+task 100: fim
+Task 100 exit: execution time 21271 ms, processor time 0 ms, 0 activations
+task 101: i=0
+task 101: i=1
+task 101: i=2
+task 101: fim
+Task 101 exit: execution time 21479 ms, processor time 0 ms, 0 activations
+task 102: i=0
+task 102: i=1
+task 102: i=2
+task 102: fim
+Task 102 exit: execution time 21694 ms, processor time 0 ms, 0 activations
+task 103: i=0
+task 103: i=1
+task 103: i=2
+task 103: fim
+Task 103 exit: execution time 21910 ms, processor time 0 ms, 0 activations
+task 104: i=0
+task 104: i=1
+task 104: i=2
+task 104: fim
+Task 104 exit: execution time 22127 ms, processor time 0 ms, 0 activations
+task 105: i=0
+task 105: i=1
+task 105: i=2
+task 105: fim
+Task 105 exit: execution time 22339 ms, processor time 0 ms, 0 activations
+task 106: i=0
+task 106: i=1
+task 106: i=2
+task 106: fim
+Task 106 exit: execution time 22548 ms, processor time 0 ms, 0 activations
+task 107: i=0
+task 107: i=1
+task 107: i=2
+task 107: fim
+Task 107 exit: execution time 22757 ms, processor time 0 ms, 0 activations
+task 108: i=0
+task 108: i=1
+task 108: i=2
+task 108: fim
+Task 108 exit: execution time 22965 ms, processor time 0 ms, 0 activations
+task 109: i=0
+task 109: i=1
+task 109: i=2
+task 109: fim
+Task 109 exit: execution time 23174 ms, processor time 0 ms, 0 activations
+task 110: i=0
+task 110: i=1
+task 110: i=2
+task 110: fim
+Task 110 exit: execution time 23388 ms, processor time 0 ms, 0 activations
+task 111: i=0
+task 111: i=1
+task 111: i=2
+task 111: fim
+Task 111 exit: execution time 23596 ms, processor time 0 ms, 0 activations
+task 112: i=0
+task 112: i=1
+task 112: i=2
+task 112: fim
+Task 112 exit: execution time 23810 ms, processor time 0 ms, 0 activations
+task 113: i=0
+task 113: i=1
+task 113: i=2
+task 113: fim
+Task 113 exit: execution time 24018 ms, processor time 0 ms, 0 activations
+task 114: i=0
+task 114: i=1
+task 114: i=2
+task 114: fim
+Task 114 exit: execution time 24229 ms, processor time 0 ms, 0 activations
+task 115: i=0
+task 115: i=1
+task 115: i=2
+task 115: fim
+Task 115 exit: execution time 24444 ms, processor time 0 ms, 0 activations
+task 116: i=0
+task 116: i=1
+task 116: i=2
+task 116: fim
+Task 116 exit: execution time 24656 ms, processor time 0 ms, 0 activations
+task 117: i=0
+task 117: i=1
+task 117: i=2
+task 117: fim
+Task 117 exit: execution time 24867 ms, processor time 0 ms, 0 activations
+task 118: i=0
+task 118: i=1
+task 118: i=2
+task 118: fim
+Task 118 exit: execution time 25078 ms, processor time 0 ms, 0 activations
+task 119: i=0
+task 119: i=1
+task 119: i=2
+task 119: fim
+Task 119 exit: execution time 25289 ms, processor time 0 ms, 0 activations
+task 120: i=0
+task 120: i=1
+task 120: i=2
+task 120: fim
+Task 120 exit: execution time 25497 ms, processor time 0 ms, 0 activations
+task 121: i=0
+task 121: i=1
+task 121: i=2
+task 121: fim
+Task 121 exit: execution time 25709 ms, processor time 0 ms, 0 activations
+task 122: i=0
+task 122: i=1
+task 122: i=2
+task 122: fim
+Task 122 exit: execution time 25922 ms, processor time 0 ms, 0 activations
+task 123: i=0
+task 123: i=1
+task 123: i=2
+task 123: fim
+Task 123 exit: execution time 26132 ms, processor time 0 ms, 0 activations
+task 124: i=0
+task 124: i=1
+task 124: i=2
+task 124: fim
+Task 124 exit: execution time 26342 ms, processor time 0 ms, 0 activations
+task 125: i=0
+task 125: i=1
+task 125: i=2
+task 125: fim
+Task 125 exit: execution time 26554 ms, processor time 0 ms, 0 activations
+task 126: i=0
+task 126: i=1
+task 126: i=2
+task 126: fim
+Task 126 exit: execution time 26767 ms, processor time 0 ms, 0 activations
+task 127: i=0
+task 127: i=1
+task 127: i=2
+task 127: fim
+Task 127 exit: execution time 26978 ms, processor time 0 ms, 0 activations
+task 128: i=0
+task 128: i=1
+task 128: i=2
+task 128: fim
+Task 128 exit: execution time 27191 ms, processor time 0 ms, 0 activations
+task 129: i=0
+task 129: i=1
+task 129: i=2
+task 129: fim
+Task 129 exit: execution time 27403 ms, processor time 0 ms, 0 activations
+task 130: i=0
+task 130: i=1
+task 130: i=2
+task 130: fim
+Task 130 exit: execution time 27614 ms, processor time 0 ms, 0 activations
+task 131: i=0
+task 131: i=1
+task 131: i=2
+task 131: fim
+Task 131 exit: execution time 27826 ms, processor time 0 ms, 0 activations
+task 132: i=0
+task 132: i=1
+task 132: i=2
+task 132: fim
+Task 132 exit: execution time 28036 ms, processor time 0 ms, 0 activations
+task 133: i=0
+task 133: i=1
+task 133: i=2
+task 133: fim
+Task 133 exit: execution time 28243 ms, processor time 0 ms, 0 activations
+task 134: i=0
+task 134: i=1
+task 134: i=2
+task 134: fim
+Task 134 exit: execution time 28454 ms, processor time 0 ms, 0 activations
+task 135: i=0
+task 135: i=1
+task 135: i=2
+task 135: fim
+Task 135 exit: execution time 28662 ms, processor time 0 ms, 0 activations
+task 136: i=0
+task 136: i=1
+task 136: i=2
+task 136: fim
+Task 136 exit: execution time 28869 ms, processor time 0 ms, 0 activations
+task 137: i=0
+task 137: i=1
+task 137: i=2
+task 137: fim
+Task 137 exit: execution time 29080 ms, processor time 0 ms, 0 activations
+task 138: i=0
+task 138: i=1
+task 138: i=2
+task 138: fim
+Task 138 exit: execution time 29290 ms, processor time 0 ms, 0 activations
+task 139: i=0
+task 139: i=1
+task 139: i=2
+task 139: fim
+Task 139 exit: execution time 29502 ms, processor time 0 ms, 0 activations
+task 140: i=0
+task 140: i=1
+task 140: i=2
+task 140: fim
+Task 140 exit: execution time 29713 ms, processor time 0 ms, 0 activations
+task 141: i=0
+task 141: i=1
+task 141: i=2
+task 141: fim
+Task 141 exit: execution time 29926 ms, processor time 0 ms, 0 activations
+task 142: i=0
+task 142: i=1
+task 142: i=2
+task 142: fim
+Task 142 exit: execution time 30135 ms, processor time 0 ms, 0 activations
+task 143: i=0
+task 143: i=1
+task 143: i=2
+task 143: fim
+Task 143 exit: execution time 30346 ms, processor time 0 ms, 0 activations
+task 144: i=0
+task 144: i=1
+task 144: i=2
+task 144: fim
+Task 144 exit: execution time 30557 ms, processor time 0 ms, 0 activations
+task 145: i=0
+task 145: i=1
+task 145: i=2
+task 145: fim
+Task 145 exit: execution time 30769 ms, processor time 0 ms, 0 activations
+task 146: i=0
+task 146: i=1
+task 146: i=2
+task 146: fim
+Task 146 exit: execution time 30980 ms, processor time 0 ms, 0 activations
+task 147: i=0
+task 147: i=1
+task 147: i=2
+task 147: fim
+Task 147 exit: execution time 31193 ms, processor time 0 ms, 0 activations
+task 148: i=0
+task 148: i=1
+task 148: i=2
+task 148: fim
+Task 148 exit: execution time 31404 ms, processor time 0 ms, 0 activations
+task 149: i=0
+task 149: i=1
+task 149: i=2
+task 149: fim
+Task 149 exit: execution time 31615 ms, processor time 0 ms, 0 activations
+task 150: i=0
+task 150: i=1
+task 150: i=2
+task 150: fim
+Task 150 exit: execution time 31826 ms, processor time 0 ms, 0 activations
+task 151: i=0
+task 151: i=1
+task 151: i=2
+task 151: fim
+Task 151 exit: execution time 32037 ms, processor time 0 ms, 0 activations
+task 152: i=0
+task 152: i=1
+task 152: i=2
+task 152: fim
+Task 152 exit: execution time 32251 ms, processor time 0 ms, 0 activations
+task 153: i=0
+task 153: i=1
+task 153: i=2
+task 153: fim
+Task 153 exit: execution time 32461 ms, processor time 0 ms, 0 activations
+task 154: i=0
+task 154: i=1
+task 154: i=2
+task 154: fim
+Task 154 exit: execution time 32674 ms, processor time 0 ms, 0 activations
+task 155: i=0
+task 155: i=1
+task 155: i=2
+task 155: fim
+Task 155 exit: execution time 32881 ms, processor time 0 ms, 0 activations
+task 156: i=0
+task 156: i=1
+task 156: i=2
+task 156: fim
+Task 156 exit: execution time 33091 ms, processor time 0 ms, 0 activations
+task 157: i=0
+task 157: i=1
+task 157: i=2
+task 157: fim
+Task 157 exit: execution time 33304 ms, processor time 0 ms, 0 activations
+task 158: i=0
+task 158: i=1
+task 158: i=2
+task 158: fim
+Task 158 exit: execution time 33518 ms, processor time 0 ms, 0 activations
+task 159: i=0
+task 159: i=1
+task 159: i=2
+task 159: fim
+Task 159 exit: execution time 33764 ms, processor time 0 ms, 0 activations
+task 160: i=0
+task 160: i=1
+task 160: i=2
+task 160: fim
+Task 160 exit: execution time 34010 ms, processor time 0 ms, 0 activations
+task 161: i=0
+task 161: i=1
+task 161: i=2
+task 161: fim
+Task 161 exit: execution time 34223 ms, processor time 0 ms, 0 activations
+task 162: i=0
+task 162: i=1
+task 162: i=2
+task 162: fim
+Task 162 exit: execution time 34443 ms, processor time 0 ms, 0 activations
+task 163: i=0
+task 163: i=1
+task 163: i=2
+task 163: fim
+Task 163 exit: execution time 34656 ms, processor time 0 ms, 0 activations
+task 164: i=0
+task 164: i=1
+task 164: i=2
+task 164: fim
+Task 164 exit: execution time 34876 ms, processor time 0 ms, 0 activations
+task 165: i=0
+task 165: i=1
+task 165: i=2
+task 165: fim
+Task 165 exit: execution time 35090 ms, processor time 0 ms, 0 activations
+task 166: i=0
+task 166: i=1
+task 166: i=2
+task 166: fim
+Task 166 exit: execution time 35302 ms, processor time 0 ms, 0 activations
+task 167: i=0
+task 167: i=1
+task 167: i=2
+task 167: fim
+Task 167 exit: execution time 35513 ms, processor time 0 ms, 0 activations
+task 168: i=0
+task 168: i=1
+task 168: i=2
+task 168: fim
+Task 168 exit: execution time 35725 ms, processor time 0 ms, 0 activations
+task 169: i=0
+task 169: i=1
+task 169: i=2
+task 169: fim
+Task 169 exit: execution time 35935 ms, processor time 0 ms, 0 activations
+task 170: i=0
+task 170: i=1
+task 170: i=2
+task 170: fim
+Task 170 exit: execution time 36151 ms, processor time 0 ms, 0 activations
+task 171: i=0
+task 171: i=1
+task 171: i=2
+task 171: fim
+Task 171 exit: execution time 36362 ms, processor time 0 ms, 0 activations
+task 172: i=0
+task 172: i=1
+task 172: i=2
+task 172: fim
+Task 172 exit: execution time 36573 ms, processor time 0 ms, 0 activations
+task 173: i=0
+task 173: i=1
+task 173: i=2
+task 173: fim
+Task 173 exit: execution time 36784 ms, processor time 0 ms, 0 activations
+task 174: i=0
+task 174: i=1
+task 174: i=2
+task 174: fim
+Task 174 exit: execution time 36995 ms, processor time 0 ms, 0 activations
+task 175: i=0
+task 175: i=1
+task 175: i=2
+task 175: fim
+Task 175 exit: execution time 37207 ms, processor time 0 ms, 0 activations
+task 176: i=0
+task 176: i=1
+task 176: i=2
+task 176: fim
+Task 176 exit: execution time 37415 ms, processor time 0 ms, 0 activations
+task 177: i=0
+task 177: i=1
+task 177: i=2
+task 177: fim
+Task 177 exit: execution time 37623 ms, processor time 0 ms, 0 activations
+task 178: i=0
+task 178: i=1
+task 178: i=2
+task 178: fim
+Task 178 exit: execution time 37828 ms, processor time 0 ms, 0 activations
+task 179: i=0
+task 179: i=1
+task 179: i=2
+task 179: fim
+Task 179 exit: execution time 38030 ms, processor time 0 ms, 0 activations
+task 180: i=0
+task 180: i=1
+task 180: i=2
+task 180: fim
+Task 180 exit: execution time 38232 ms, processor time 0 ms, 0 activations
+task 181: i=0
+task 181: i=1
+task 181: i=2
+task 181: fim
+Task 181 exit: execution time 38438 ms, processor time 0 ms, 0 activations
+task 182: i=0
+task 182: i=1
+task 182: i=2
+task 182: fim
+Task 182 exit: execution time 38650 ms, processor time 0 ms, 0 activations
+task 183: i=0
+task 183: i=1
+task 183: i=2
+task 183: fim
+Task 183 exit: execution time 38866 ms, processor time 0 ms, 0 activations
+task 184: i=0
+task 184: i=1
+task 184: i=2
+task 184: fim
+Task 184 exit: execution time 39075 ms, processor time 0 ms, 0 activations
+task 185: i=0
+task 185: i=1
+task 185: i=2
+task 185: fim
+Task 185 exit: execution time 39282 ms, processor time 0 ms, 0 activations
+task 186: i=0
+task 186: i=1
+task 186: i=2
+task 186: fim
+Task 186 exit: execution time 39492 ms, processor time 0 ms, 0 activations
+task 187: i=0
+task 187: i=1
+task 187: i=2
+task 187: fim
+Task 187 exit: execution time 39721 ms, processor time 0 ms, 0 activations
+task 188: i=0
+task 188: i=1
+task 188: i=2
+task 188: fim
+Task 188 exit: execution time 39927 ms, processor time 0 ms, 0 activations
+task 189: i=0
+task 189: i=1
+task 189: i=2
+task 189: fim
+Task 189 exit: execution time 40136 ms, processor time 0 ms, 0 activations
+task 190: i=0
+task 190: i=1
+task 190: i=2
+task 190: fim
+Task 190 exit: execution time 40349 ms, processor time 0 ms, 0 activations
+task 191: i=0
+task 191: i=1
+task 191: i=2
+task 191: fim
+Task 191 exit: execution time 40557 ms, processor time 0 ms, 0 activations
+task 192: i=0
+task 192: i=1
+task 192: i=2
+task 192: fim
+Task 192 exit: execution time 40770 ms, processor time 0 ms, 0 activations
+task 193: i=0
+task 193: i=1
+task 193: i=2
+task 193: fim
+Task 193 exit: execution time 40981 ms, processor time 0 ms, 0 activations
+task 194: i=0
+task 194: i=1
+task 194: i=2
+task 194: fim
+Task 194 exit: execution time 41187 ms, processor time 0 ms, 0 activations
+task 195: i=0
+task 195: i=1
+task 195: i=2
+task 195: fim
+Task 195 exit: execution time 41397 ms, processor time 0 ms, 0 activations
+task 196: i=0
+task 196: i=1
+task 196: i=2
+task 196: fim
+Task 196 exit: execution time 41610 ms, processor time 0 ms, 0 activations
+task 197: i=0
+task 197: i=1
+task 197: i=2
+task 197: fim
+Task 197 exit: execution time 41819 ms, processor time 0 ms, 0 activations
+task 198: i=0
+task 198: i=1
+task 198: i=2
+task 198: fim
+Task 198 exit: execution time 42026 ms, processor time 0 ms, 0 activations
+task 199: i=0
+task 199: i=1
+task 199: i=2
+task 199: fim
+Task 199 exit: execution time 42241 ms, processor time 0 ms, 0 activations
+task 200: i=0
+task 200: i=1
+task 200: i=2
+task 200: fim
+Task 200 exit: execution time 42453 ms, processor time 0 ms, 0 activations
+task 201: i=0
+task 201: i=1
+task 201: i=2
+task 201: fim
+Task 201 exit: execution time 42662 ms, processor time 0 ms, 0 activations
+task 202: i=0
+task 202: i=1
+task 202: i=2
+task 202: fim
+Task 202 exit: execution time 42875 ms, processor time 0 ms, 0 activations
+task 203: i=0
+task 203: i=1
+task 203: i=2
+task 203: fim
+Task 203 exit: execution time 43086 ms, processor time 0 ms, 0 activations
+task 204: i=0
+task 204: i=1
+task 204: i=2
+task 204: fim
+Task 204 exit: execution time 43294 ms, processor time 0 ms, 0 activations
+task 205: i=0
+task 205: i=1
+task 205: i=2
+task 205: fim
+Task 205 exit: execution time 43502 ms, processor time 0 ms, 0 activations
+task 206: i=0
+task 206: i=1
+task 206: i=2
+task 206: fim
+Task 206 exit: execution time 43712 ms, processor time 0 ms, 0 activations
+task 207: i=0
+task 207: i=1
+task 207: i=2
+task 207: fim
+Task 207 exit: execution time 43918 ms, processor time 0 ms, 0 activations
+task 208: i=0
+task 208: i=1
+task 208: i=2
+task 208: fim
+Task 208 exit: execution time 44128 ms, processor time 0 ms, 0 activations
+task 209: i=0
+task 209: i=1
+task 209: i=2
+task 209: fim
+Task 209 exit: execution time 44340 ms, processor time 0 ms, 0 activations
+task 210: i=0
+task 210: i=1
+task 210: i=2
+task 210: fim
+Task 210 exit: execution time 44553 ms, processor time 0 ms, 0 activations
+task 211: i=0
+task 211: i=1
+task 211: i=2
+task 211: fim
+Task 211 exit: execution time 44762 ms, processor time 0 ms, 0 activations
+task 212: i=0
+task 212: i=1
+task 212: i=2
+task 212: fim
+Task 212 exit: execution time 44974 ms, processor time 0 ms, 0 activations
+task 213: i=0
+task 213: i=1
+task 213: i=2
+task 213: fim
+Task 213 exit: execution time 45186 ms, processor time 0 ms, 0 activations
+task 214: i=0
+task 214: i=1
+task 214: i=2
+task 214: fim
+Task 214 exit: execution time 45399 ms, processor time 0 ms, 0 activations
+task 215: i=0
+task 215: i=1
+task 215: i=2
+task 215: fim
+Task 215 exit: execution time 45618 ms, processor time 0 ms, 0 activations
+task 216: i=0
+task 216: i=1
+task 216: i=2
+task 216: fim
+Task 216 exit: execution time 45836 ms, processor time 0 ms, 0 activations
+task 217: i=0
+task 217: i=1
+task 217: i=2
+task 217: fim
+Task 217 exit: execution time 46053 ms, processor time 0 ms, 0 activations
+task 218: i=0
+task 218: i=1
+task 218: i=2
+task 218: fim
+Task 218 exit: execution time 46270 ms, processor time 0 ms, 0 activations
+task 219: i=0
+task 219: i=1
+task 219: i=2
+task 219: fim
+Task 219 exit: execution time 46485 ms, processor time 0 ms, 0 activations
+task 220: i=0
+task 220: i=1
+task 220: i=2
+task 220: fim
+Task 220 exit: execution time 46702 ms, processor time 0 ms, 0 activations
+task 221: i=0
+task 221: i=1
+task 221: i=2
+task 221: fim
+Task 221 exit: execution time 46917 ms, processor time 0 ms, 0 activations
+task 222: i=0
+task 222: i=1
+task 222: i=2
+task 222: fim
+Task 222 exit: execution time 47132 ms, processor time 0 ms, 0 activations
+task 223: i=0
+task 223: i=1
+task 223: i=2
+task 223: fim
+Task 223 exit: execution time 47348 ms, processor time 0 ms, 0 activations
+task 224: i=0
+task 224: i=1
+task 224: i=2
+task 224: fim
+Task 224 exit: execution time 47563 ms, processor time 0 ms, 0 activations
+task 225: i=0
+task 225: i=1
+task 225: i=2
+task 225: fim
+Task 225 exit: execution time 47778 ms, processor time 0 ms, 0 activations
+task 226: i=0
+task 226: i=1
+task 226: i=2
+task 226: fim
+Task 226 exit: execution time 47990 ms, processor time 0 ms, 0 activations
+task 227: i=0
+task 227: i=1
+task 227: i=2
+task 227: fim
+Task 227 exit: execution time 48203 ms, processor time 0 ms, 0 activations
+task 228: i=0
+task 228: i=1
+task 228: i=2
+task 228: fim
+Task 228 exit: execution time 48420 ms, processor time 0 ms, 0 activations
+task 229: i=0
+task 229: i=1
+task 229: i=2
+task 229: fim
+Task 229 exit: execution time 48636 ms, processor time 0 ms, 0 activations
+task 230: i=0
+task 230: i=1
+task 230: i=2
+task 230: fim
+Task 230 exit: execution time 48850 ms, processor time 0 ms, 0 activations
+task 231: i=0
+task 231: i=1
+task 231: i=2
+task 231: fim
+Task 231 exit: execution time 49065 ms, processor time 0 ms, 0 activations
+task 232: i=0
+task 232: i=1
+task 232: i=2
+task 232: fim
+Task 232 exit: execution time 49279 ms, processor time 0 ms, 0 activations
+task 233: i=0
+task 233: i=1
+task 233: i=2
+task 233: fim
+Task 233 exit: execution time 49490 ms, processor time 0 ms, 0 activations
+task 234: i=0
+task 234: i=1
+task 234: i=2
+task 234: fim
+Task 234 exit: execution time 49702 ms, processor time 0 ms, 0 activations
+task 235: i=0
+task 235: i=1
+task 235: i=2
+task 235: fim
+Task 235 exit: execution time 49916 ms, processor time 0 ms, 0 activations
+task 236: i=0
+task 236: i=1
+task 236: i=2
+task 236: fim
+Task 236 exit: execution time 50127 ms, processor time 0 ms, 0 activations
+task 237: i=0
+task 237: i=1
+task 237: i=2
+task 237: fim
+Task 237 exit: execution time 50337 ms, processor time 0 ms, 0 activations
+task 238: i=0
+task 238: i=1
+task 238: i=2
+task 238: fim
+Task 238 exit: execution time 50551 ms, processor time 0 ms, 0 activations
+task 239: i=0
+task 239: i=1
+task 239: i=2
+task 239: fim
+Task 239 exit: execution time 50764 ms, processor time 0 ms, 0 activations
+task 240: i=0
+task 240: i=1
+task 240: i=2
+task 240: fim
+Task 240 exit: execution time 50974 ms, processor time 0 ms, 0 activations
+task 241: i=0
+task 241: i=1
+task 241: i=2
+task 241: fim
+Task 241 exit: execution time 51190 ms, processor time 0 ms, 0 activations
+task 242: i=0
+task 242: i=1
+task 242: i=2
+task 242: fim
+Task 242 exit: execution time 51405 ms, processor time 0 ms, 0 activations
+task 243: i=0
+task 243: i=1
+task 243: i=2
+task 243: fim
+Task 243 exit: execution time 51619 ms, processor time 0 ms, 0 activations
+task 244: i=0
+task 244: i=1
+task 244: i=2
+task 244: fim
+Task 244 exit: execution time 51833 ms, processor time 0 ms, 0 activations
+task 245: i=0
+task 245: i=1
+task 245: i=2
+task 245: fim
+Task 245 exit: execution time 52050 ms, processor time 0 ms, 0 activations
+task 246: i=0
+task 246: i=1
+task 246: i=2
+task 246: fim
+Task 246 exit: execution time 52264 ms, processor time 0 ms, 0 activations
+task 247: i=0
+task 247: i=1
+task 247: i=2
+task 247: fim
+Task 247 exit: execution time 52477 ms, processor time 0 ms, 0 activations
+task 248: i=0
+task 248: i=1
+task 248: i=2
+task 248: fim
+Task 248 exit: execution time 52695 ms, processor time 0 ms, 0 activations
+task 249: i=0
+task 249: i=1
+task 249: i=2
+task 249: fim
+Task 249 exit: execution time 52909 ms, processor time 0 ms, 0 activations
+task 250: i=0
+task 250: i=1
+task 250: i=2
+task 250: fim
+Task 250 exit: execution time 53122 ms, processor time 0 ms, 0 activations
+task 251: i=0
+task 251: i=1
+task 251: i=2
+task 251: fim
+Task 251 exit: execution time 53337 ms, processor time 0 ms, 0 activations
+task 252: i=0
+task 252: i=1
+task 252: i=2
+task 252: fim
+Task 252 exit: execution time 53553 ms, processor time 0 ms, 0 activations
+task 253: i=0
+task 253: i=1
+task 253: i=2
+task 253: fim
+Task 253 exit: execution time 53766 ms, processor time 0 ms, 0 activations
+task 254: i=0
+task 254: i=1
+task 254: i=2
+task 254: fim
+Task 254 exit: execution time 53982 ms, processor time 0 ms, 0 activations
+task 255: i=0
+task 255: i=1
+task 255: i=2
+task 255: fim
+Task 255 exit: execution time 54197 ms, processor time 0 ms, 0 activations
+task 256: i=0
+task 256: i=1
+task 256: i=2
+task 256: fim
+Task 256 exit: execution time 54411 ms, processor time 0 ms, 0 activations
+task 257: i=0
+task 257: i=1
+task 257: i=2
+task 257: fim
+Task 257 exit: execution time 54628 ms, processor time 0 ms, 0 activations
+task 258: i=0
+task 258: i=1
+task 258: i=2
+task 258: fim
+Task 258 exit: execution time 54841 ms, processor time 0 ms, 0 activations
+task 259: i=0
+task 259: i=1
+task 259: i=2
+task 259: fim
+Task 259 exit: execution time 55056 ms, processor time 0 ms, 0 activations
+task 260: i=0
+task 260: i=1
+task 260: i=2
+task 260: fim
+Task 260 exit: execution time 55274 ms, processor time 0 ms, 0 activations
+task 261: i=0
+task 261: i=1
+task 261: i=2
+task 261: fim
+Task 261 exit: execution time 55489 ms, processor time 0 ms, 0 activations
+task 262: i=0
+task 262: i=1
+task 262: i=2
+task 262: fim
+Task 262 exit: execution time 55703 ms, processor time 0 ms, 0 activations
+task 263: i=0
+task 263: i=1
+task 263: i=2
+task 263: fim
+Task 263 exit: execution time 55920 ms, processor time 0 ms, 0 activations
+task 264: i=0
+task 264: i=1
+task 264: i=2
+task 264: fim
+Task 264 exit: execution time 56133 ms, processor time 0 ms, 0 activations
+task 265: i=0
+task 265: i=1
+task 265: i=2
+task 265: fim
+Task 265 exit: execution time 56347 ms, processor time 0 ms, 0 activations
+task 266: i=0
+task 266: i=1
+task 266: i=2
+task 266: fim
+Task 266 exit: execution time 56563 ms, processor time 0 ms, 0 activations
+task 267: i=0
+task 267: i=1
+task 267: i=2
+task 267: fim
+Task 267 exit: execution time 56777 ms, processor time 0 ms, 0 activations
+task 268: i=0
+task 268: i=1
+task 268: i=2
+task 268: fim
+Task 268 exit: execution time 56990 ms, processor time 0 ms, 0 activations
+task 269: i=0
+task 269: i=1
+task 269: i=2
+task 269: fim
+Task 269 exit: execution time 57205 ms, processor time 0 ms, 0 activations
+task 270: i=0
+task 270: i=1
+task 270: i=2
+task 270: fim
+Task 270 exit: execution time 57423 ms, processor time 0 ms, 0 activations
+task 271: i=0
+task 271: i=1
+task 271: i=2
+task 271: fim
+Task 271 exit: execution time 57636 ms, processor time 0 ms, 0 activations
+task 272: i=0
+task 272: i=1
+task 272: i=2
+task 272: fim
+Task 272 exit: execution time 57847 ms, processor time 0 ms, 0 activations
+task 273: i=0
+task 273: i=1
+task 273: i=2
+task 273: fim
+Task 273 exit: execution time 58062 ms, processor time 0 ms, 0 activations
+task 274: i=0
+task 274: i=1
+task 274: i=2
+task 274: fim
+Task 274 exit: execution time 58279 ms, processor time 0 ms, 0 activations
+task 275: i=0
+task 275: i=1
+task 275: i=2
+task 275: fim
+Task 275 exit: execution time 58493 ms, processor time 0 ms, 0 activations
+task 276: i=0
+task 276: i=1
+task 276: i=2
+task 276: fim
+Task 276 exit: execution time 58709 ms, processor time 0 ms, 0 activations
+task 277: i=0
+task 277: i=1
+task 277: i=2
+task 277: fim
+Task 277 exit: execution time 58926 ms, processor time 0 ms, 0 activations
+task 278: i=0
+task 278: i=1
+task 278: i=2
+task 278: fim
+Task 278 exit: execution time 59139 ms, processor time 0 ms, 0 activations
+task 279: i=0
+task 279: i=1
+task 279: i=2
+task 279: fim
+Task 279 exit: execution time 59354 ms, processor time 0 ms, 0 activations
+task 280: i=0
+task 280: i=1
+task 280: i=2
+task 280: fim
+Task 280 exit: execution time 59568 ms, processor time 0 ms, 0 activations
+task 281: i=0
+task 281: i=1
+task 281: i=2
+task 281: fim
+Task 281 exit: execution time 59784 ms, processor time 0 ms, 0 activations
+task 282: i=0
+task 282: i=1
+task 282: i=2
+task 282: fim
+Task 282 exit: execution time 60000 ms, processor time 0 ms, 0 activations
+task 283: i=0
+task 283: i=1
+task 283: i=2
+task 283: fim
+Task 283 exit: execution time 60216 ms, processor time 0 ms, 0 activations
+task 284: i=0
+task 284: i=1
+task 284: i=2
+task 284: fim
+Task 284 exit: execution time 60431 ms, processor time 0 ms, 0 activations
+task 285: i=0
+task 285: i=1
+task 285: i=2
+task 285: fim
+Task 285 exit: execution time 60647 ms, processor time 0 ms, 0 activations
+task 286: i=0
+task 286: i=1
+task 286: i=2
+task 286: fim
+Task 286 exit: execution time 60860 ms, processor time 0 ms, 0 activations
+task 287: i=0
+task 287: i=1
+task 287: i=2
+task 287: fim
+Task 287 exit: execution time 61077 ms, processor time 0 ms, 0 activations
+task 288: i=0
+task 288: i=1
+task 288: i=2
+task 288: fim
+Task 288 exit: execution time 61291 ms, processor time 0 ms, 0 activations
+task 289: i=0
+task 289: i=1
+task 289: i=2
+task 289: fim
+Task 289 exit: execution time 61509 ms, processor time 0 ms, 0 activations
+task 290: i=0
+task 290: i=1
+task 290: i=2
+task 290: fim
+Task 290 exit: execution time 61724 ms, processor time 0 ms, 0 activations
+task 291: i=0
+task 291: i=1
+task 291: i=2
+task 291: fim
+Task 291 exit: execution time 61941 ms, processor time 0 ms, 0 activations
+task 292: i=0
+task 292: i=1
+task 292: i=2
+task 292: fim
+Task 292 exit: execution time 62153 ms, processor time 0 ms, 0 activations
+task 293: i=0
+task 293: i=1
+task 293: i=2
+task 293: fim
+Task 293 exit: execution time 62371 ms, processor time 0 ms, 0 activations
+task 294: i=0
+task 294: i=1
+task 294: i=2
+task 294: fim
+Task 294 exit: execution time 62587 ms, processor time 0 ms, 0 activations
+task 295: i=0
+task 295: i=1
+task 295: i=2
+task 295: fim
+Task 295 exit: execution time 62803 ms, processor time 0 ms, 0 activations
+task 296: i=0
+task 296: i=1
+task 296: i=2
+task 296: fim
+Task 296 exit: execution time 63019 ms, processor time 0 ms, 0 activations
+task 297: i=0
+task 297: i=1
+task 297: i=2
+task 297: fim
+Task 297 exit: execution time 63236 ms, processor time 0 ms, 0 activations
+task 298: i=0
+task 298: i=1
+task 298: i=2
+task 298: fim
+Task 298 exit: execution time 63448 ms, processor time 0 ms, 0 activations
+task 299: i=0
+task 299: i=1
+task 299: i=2
+task 299: fim
+Task 299 exit: execution time 63664 ms, processor time 0 ms, 0 activations
+task 300: i=0
+task 300: i=1
+task 300: i=2
+task 300: fim
+Task 300 exit: execution time 63880 ms, processor time 0 ms, 0 activations
+task 301: i=0
+task 301: i=1
+task 301: i=2
+task 301: fim
+Task 301 exit: execution time 64096 ms, processor time 0 ms, 0 activations
+task 302: i=0
+task 302: i=1
+task 302: i=2
+task 302: fim
+Task 302 exit: execution time 64311 ms, processor time 0 ms, 0 activations
+task 303: i=0
+task 303: i=1
+task 303: i=2
+task 303: fim
+Task 303 exit: execution time 64527 ms, processor time 0 ms, 0 activations
+task 304: i=0
+task 304: i=1
+task 304: i=2
+task 304: fim
+Task 304 exit: execution time 64743 ms, processor time 0 ms, 0 activations
+task 305: i=0
+task 305: i=1
+task 305: i=2
+task 305: fim
+Task 305 exit: execution time 64956 ms, processor time 0 ms, 0 activations
+task 306: i=0
+task 306: i=1
+task 306: i=2
+task 306: fim
+Task 306 exit: execution time 65173 ms, processor time 0 ms, 0 activations
+task 307: i=0
+task 307: i=1
+task 307: i=2
+task 307: fim
+Task 307 exit: execution time 65389 ms, processor time 0 ms, 0 activations
+task 308: i=0
+task 308: i=1
+task 308: i=2
+task 308: fim
+Task 308 exit: execution time 65603 ms, processor time 0 ms, 0 activations
+task 309: i=0
+task 309: i=1
+task 309: i=2
+task 309: fim
+Task 309 exit: execution time 65818 ms, processor time 0 ms, 0 activations
+task 310: i=0
+task 310: i=1
+task 310: i=2
+task 310: fim
+Task 310 exit: execution time 66035 ms, processor time 0 ms, 0 activations
+task 311: i=0
+task 311: i=1
+task 311: i=2
+task 311: fim
+Task 311 exit: execution time 66249 ms, processor time 0 ms, 0 activations
+task 312: i=0
+task 312: i=1
+task 312: i=2
+task 312: fim
+Task 312 exit: execution time 66463 ms, processor time 0 ms, 0 activations
+task 313: i=0
+task 313: i=1
+task 313: i=2
+task 313: fim
+Task 313 exit: execution time 66678 ms, processor time 0 ms, 0 activations
+task 314: i=0
+task 314: i=1
+task 314: i=2
+task 314: fim
+Task 314 exit: execution time 66894 ms, processor time 0 ms, 0 activations
+task 315: i=0
+task 315: i=1
+task 315: i=2
+task 315: fim
+Task 315 exit: execution time 67109 ms, processor time 0 ms, 0 activations
+task 316: i=0
+task 316: i=1
+task 316: i=2
+task 316: fim
+Task 316 exit: execution time 67323 ms, processor time 0 ms, 0 activations
+task 317: i=0
+task 317: i=1
+task 317: i=2
+task 317: fim
+Task 317 exit: execution time 67538 ms, processor time 0 ms, 0 activations
+task 318: i=0
+task 318: i=1
+task 318: i=2
+task 318: fim
+Task 318 exit: execution time 67755 ms, processor time 0 ms, 0 activations
+task 319: i=0
+task 319: i=1
+task 319: i=2
+task 319: fim
+Task 319 exit: execution time 67973 ms, processor time 0 ms, 0 activations
+task 320: i=0
+task 320: i=1
+task 320: i=2
+task 320: fim
+Task 320 exit: execution time 68190 ms, processor time 0 ms, 0 activations
+task 321: i=0
+task 321: i=1
+task 321: i=2
+task 321: fim
+Task 321 exit: execution time 68408 ms, processor time 0 ms, 0 activations
+task 322: i=0
+task 322: i=1
+task 322: i=2
+task 322: fim
+Task 322 exit: execution time 68625 ms, processor time 0 ms, 0 activations
+task 323: i=0
+task 323: i=1
+task 323: i=2
+task 323: fim
+Task 323 exit: execution time 68839 ms, processor time 0 ms, 0 activations
+task 324: i=0
+task 324: i=1
+task 324: i=2
+task 324: fim
+Task 324 exit: execution time 69050 ms, processor time 0 ms, 0 activations
+task 325: i=0
+task 325: i=1
+task 325: i=2
+task 325: fim
+Task 325 exit: execution time 69265 ms, processor time 0 ms, 0 activations
+task 326: i=0
+task 326: i=1
+task 326: i=2
+task 326: fim
+Task 326 exit: execution time 69477 ms, processor time 0 ms, 0 activations
+task 327: i=0
+task 327: i=1
+task 327: i=2
+task 327: fim
+Task 327 exit: execution time 69688 ms, processor time 0 ms, 0 activations
+task 328: i=0
+task 328: i=1
+task 328: i=2
+task 328: fim
+Task 328 exit: execution time 69902 ms, processor time 0 ms, 0 activations
+task 329: i=0
+task 329: i=1
+task 329: i=2
+task 329: fim
+Task 329 exit: execution time 70114 ms, processor time 0 ms, 0 activations
+task 330: i=0
+task 330: i=1
+task 330: i=2
+task 330: fim
+Task 330 exit: execution time 70329 ms, processor time 0 ms, 0 activations
+task 331: i=0
+task 331: i=1
+task 331: i=2
+task 331: fim
+Task 331 exit: execution time 70540 ms, processor time 0 ms, 0 activations
+task 332: i=0
+task 332: i=1
+task 332: i=2
+task 332: fim
+Task 332 exit: execution time 70757 ms, processor time 0 ms, 0 activations
+task 333: i=0
+task 333: i=1
+task 333: i=2
+task 333: fim
+Task 333 exit: execution time 70968 ms, processor time 0 ms, 0 activations
+task 334: i=0
+task 334: i=1
+task 334: i=2
+task 334: fim
+Task 334 exit: execution time 71182 ms, processor time 0 ms, 0 activations
+task 335: i=0
+task 335: i=1
+task 335: i=2
+task 335: fim
+Task 335 exit: execution time 71396 ms, processor time 0 ms, 0 activations
+task 336: i=0
+task 336: i=1
+task 336: i=2
+task 336: fim
+Task 336 exit: execution time 71607 ms, processor time 0 ms, 0 activations
+task 337: i=0
+task 337: i=1
+task 337: i=2
+task 337: fim
+Task 337 exit: execution time 71819 ms, processor time 0 ms, 0 activations
+task 338: i=0
+task 338: i=1
+task 338: i=2
+task 338: fim
+Task 338 exit: execution time 72033 ms, processor time 0 ms, 0 activations
+task 339: i=0
+task 339: i=1
+task 339: i=2
+task 339: fim
+Task 339 exit: execution time 72249 ms, processor time 0 ms, 0 activations
+task 340: i=0
+task 340: i=1
+task 340: i=2
+task 340: fim
+Task 340 exit: execution time 72465 ms, processor time 0 ms, 0 activations
+task 341: i=0
+task 341: i=1
+task 341: i=2
+task 341: fim
+Task 341 exit: execution time 72680 ms, processor time 0 ms, 0 activations
+task 342: i=0
+task 342: i=1
+task 342: i=2
+task 342: fim
+Task 342 exit: execution time 72896 ms, processor time 0 ms, 0 activations
+task 343: i=0
+task 343: i=1
+task 343: i=2
+task 343: fim
+Task 343 exit: execution time 73112 ms, processor time 0 ms, 0 activations
+task 344: i=0
+task 344: i=1
+task 344: i=2
+task 344: fim
+Task 344 exit: execution time 73326 ms, processor time 0 ms, 0 activations
+task 345: i=0
+task 345: i=1
+task 345: i=2
+task 345: fim
+Task 345 exit: execution time 73537 ms, processor time 0 ms, 0 activations
+task 346: i=0
+task 346: i=1
+task 346: i=2
+task 346: fim
+Task 346 exit: execution time 73751 ms, processor time 0 ms, 0 activations
+task 347: i=0
+task 347: i=1
+task 347: i=2
+task 347: fim
+Task 347 exit: execution time 73962 ms, processor time 0 ms, 0 activations
+task 348: i=0
+task 348: i=1
+task 348: i=2
+task 348: fim
+Task 348 exit: execution time 74177 ms, processor time 0 ms, 0 activations
+task 349: i=0
+task 349: i=1
+task 349: i=2
+task 349: fim
+Task 349 exit: execution time 74391 ms, processor time 0 ms, 0 activations
+task 350: i=0
+task 350: i=1
+task 350: i=2
+task 350: fim
+Task 350 exit: execution time 74605 ms, processor time 0 ms, 0 activations
+task 351: i=0
+task 351: i=1
+task 351: i=2
+task 351: fim
+Task 351 exit: execution time 74818 ms, processor time 0 ms, 0 activations
+task 352: i=0
+task 352: i=1
+task 352: i=2
+task 352: fim
+Task 352 exit: execution time 75032 ms, processor time 0 ms, 0 activations
+task 353: i=0
+task 353: i=1
+task 353: i=2
+task 353: fim
+Task 353 exit: execution time 75237 ms, processor time 0 ms, 0 activations
+task 354: i=0
+task 354: i=1
+task 354: i=2
+task 354: fim
+Task 354 exit: execution time 75468 ms, processor time 0 ms, 0 activations
+task 355: i=0
+task 355: i=1
+task 355: i=2
+task 355: fim
+Task 355 exit: execution time 75679 ms, processor time 0 ms, 0 activations
+task 356: i=0
+task 356: i=1
+task 356: i=2
+task 356: fim
+Task 356 exit: execution time 75894 ms, processor time 0 ms, 0 activations
+task 357: i=0
+task 357: i=1
+task 357: i=2
+task 357: fim
+Task 357 exit: execution time 76105 ms, processor time 0 ms, 0 activations
+task 358: i=0
+task 358: i=1
+task 358: i=2
+task 358: fim
+Task 358 exit: execution time 76320 ms, processor time 0 ms, 0 activations
+task 359: i=0
+task 359: i=1
+task 359: i=2
+task 359: fim
+Task 359 exit: execution time 76524 ms, processor time 0 ms, 0 activations
+task 360: i=0
+task 360: i=1
+task 360: i=2
+task 360: fim
+Task 360 exit: execution time 76728 ms, processor time 0 ms, 0 activations
+task 361: i=0
+task 361: i=1
+task 361: i=2
+task 361: fim
+Task 361 exit: execution time 76938 ms, processor time 0 ms, 0 activations
+task 362: i=0
+task 362: i=1
+task 362: i=2
+task 362: fim
+Task 362 exit: execution time 77147 ms, processor time 0 ms, 0 activations
+task 363: i=0
+task 363: i=1
+task 363: i=2
+task 363: fim
+Task 363 exit: execution time 77359 ms, processor time 0 ms, 0 activations
+task 364: i=0
+task 364: i=1
+task 364: i=2
+task 364: fim
+Task 364 exit: execution time 77598 ms, processor time 0 ms, 0 activations
+task 365: i=0
+task 365: i=1
+task 365: i=2
+task 365: fim
+Task 365 exit: execution time 77809 ms, processor time 0 ms, 0 activations
+task 366: i=0
+task 366: i=1
+task 366: i=2
+task 366: fim
+Task 366 exit: execution time 78014 ms, processor time 0 ms, 0 activations
+task 367: i=0
+task 367: i=1
+task 367: i=2
+task 367: fim
+Task 367 exit: execution time 78225 ms, processor time 0 ms, 0 activations
+task 368: i=0
+task 368: i=1
+task 368: i=2
+task 368: fim
+Task 368 exit: execution time 78433 ms, processor time 0 ms, 0 activations
+task 369: i=0
+task 369: i=1
+task 369: i=2
+task 369: fim
+Task 369 exit: execution time 78641 ms, processor time 0 ms, 0 activations
+task 370: i=0
+task 370: i=1
+task 370: i=2
+task 370: fim
+Task 370 exit: execution time 78855 ms, processor time 0 ms, 0 activations
+task 371: i=0
+task 371: i=1
+task 371: i=2
+task 371: fim
+Task 371 exit: execution time 79071 ms, processor time 0 ms, 0 activations
+task 372: i=0
+task 372: i=1
+task 372: i=2
+task 372: fim
+Task 372 exit: execution time 79289 ms, processor time 0 ms, 0 activations
+task 373: i=0
+task 373: i=1
+task 373: i=2
+task 373: fim
+Task 373 exit: execution time 79505 ms, processor time 0 ms, 0 activations
+task 374: i=0
+task 374: i=1
+task 374: i=2
+task 374: fim
+Task 374 exit: execution time 79720 ms, processor time 0 ms, 0 activations
+task 375: i=0
+task 375: i=1
+task 375: i=2
+task 375: fim
+Task 375 exit: execution time 79932 ms, processor time 0 ms, 0 activations
+task 376: i=0
+task 376: i=1
+task 376: i=2
+task 376: fim
+Task 376 exit: execution time 80145 ms, processor time 0 ms, 0 activations
+task 377: i=0
+task 377: i=1
+task 377: i=2
+task 377: fim
+Task 377 exit: execution time 80352 ms, processor time 0 ms, 0 activations
+task 378: i=0
+task 378: i=1
+task 378: i=2
+task 378: fim
+Task 378 exit: execution time 80562 ms, processor time 0 ms, 0 activations
+task 379: i=0
+task 379: i=1
+task 379: i=2
+task 379: fim
+Task 379 exit: execution time 80770 ms, processor time 0 ms, 0 activations
+task 380: i=0
+task 380: i=1
+task 380: i=2
+task 380: fim
+Task 380 exit: execution time 80975 ms, processor time 0 ms, 0 activations
+task 381: i=0
+task 381: i=1
+task 381: i=2
+task 381: fim
+Task 381 exit: execution time 81185 ms, processor time 0 ms, 0 activations
+task 382: i=0
+task 382: i=1
+task 382: i=2
+task 382: fim
+Task 382 exit: execution time 81390 ms, processor time 0 ms, 0 activations
+task 383: i=0
+task 383: i=1
+task 383: i=2
+task 383: fim
+Task 383 exit: execution time 81593 ms, processor time 0 ms, 0 activations
+task 384: i=0
+task 384: i=1
+task 384: i=2
+task 384: fim
+Task 384 exit: execution time 81798 ms, processor time 0 ms, 0 activations
+task 385: i=0
+task 385: i=1
+task 385: i=2
+task 385: fim
+Task 385 exit: execution time 82008 ms, processor time 0 ms, 0 activations
+task 386: i=0
+task 386: i=1
+task 386: i=2
+task 386: fim
+Task 386 exit: execution time 82221 ms, processor time 0 ms, 0 activations
+task 387: i=0
+task 387: i=1
+task 387: i=2
+task 387: fim
+Task 387 exit: execution time 82437 ms, processor time 0 ms, 0 activations
+task 388: i=0
+task 388: i=1
+task 388: i=2
+task 388: fim
+Task 388 exit: execution time 82651 ms, processor time 0 ms, 0 activations
+task 389: i=0
+task 389: i=1
+task 389: i=2
+task 389: fim
+Task 389 exit: execution time 82867 ms, processor time 0 ms, 0 activations
+task 390: i=0
+task 390: i=1
+task 390: i=2
+task 390: fim
+Task 390 exit: execution time 83082 ms, processor time 0 ms, 0 activations
+task 391: i=0
+task 391: i=1
+task 391: i=2
+task 391: fim
+Task 391 exit: execution time 83298 ms, processor time 0 ms, 0 activations
+task 392: i=0
+task 392: i=1
+task 392: i=2
+task 392: fim
+Task 392 exit: execution time 83512 ms, processor time 0 ms, 0 activations
+task 393: i=0
+task 393: i=1
+task 393: i=2
+task 393: fim
+Task 393 exit: execution time 83727 ms, processor time 0 ms, 0 activations
+task 394: i=0
+task 394: i=1
+task 394: i=2
+task 394: fim
+Task 394 exit: execution time 83931 ms, processor time 0 ms, 0 activations
+task 395: i=0
+task 395: i=1
+task 395: i=2
+task 395: fim
+Task 395 exit: execution time 84135 ms, processor time 0 ms, 0 activations
+task 396: i=0
+task 396: i=1
+task 396: i=2
+task 396: fim
+Task 396 exit: execution time 84346 ms, processor time 0 ms, 0 activations
+task 397: i=0
+task 397: i=1
+task 397: i=2
+task 397: fim
+Task 397 exit: execution time 84548 ms, processor time 0 ms, 0 activations
+task 398: i=0
+task 398: i=1
+task 398: i=2
+task 398: fim
+Task 398 exit: execution time 84751 ms, processor time 0 ms, 0 activations
+task 399: i=0
+task 399: i=1
+task 399: i=2
+task 399: fim
+Task 399 exit: execution time 84956 ms, processor time 0 ms, 0 activations
+task 400: i=0
+task 400: i=1
+task 400: i=2
+task 400: fim
+Task 400 exit: execution time 85159 ms, processor time 0 ms, 0 activations
+task 401: i=0
+task 401: i=1
+task 401: i=2
+task 401: fim
+Task 401 exit: execution time 85363 ms, processor time 0 ms, 0 activations
+task 402: i=0
+task 402: i=1
+task 402: i=2
+task 402: fim
+Task 402 exit: execution time 85565 ms, processor time 0 ms, 0 activations
+task 403: i=0
+task 403: i=1
+task 403: i=2
+task 403: fim
+Task 403 exit: execution time 85768 ms, processor time 0 ms, 0 activations
+task 404: i=0
+task 404: i=1
+task 404: i=2
+task 404: fim
+Task 404 exit: execution time 85971 ms, processor time 0 ms, 0 activations
+task 405: i=0
+task 405: i=1
+task 405: i=2
+task 405: fim
+Task 405 exit: execution time 86174 ms, processor time 0 ms, 0 activations
+task 406: i=0
+task 406: i=1
+task 406: i=2
+task 406: fim
+Task 406 exit: execution time 86378 ms, processor time 0 ms, 0 activations
+task 407: i=0
+task 407: i=1
+task 407: i=2
+task 407: fim
+Task 407 exit: execution time 86583 ms, processor time 0 ms, 0 activations
+task 408: i=0
+task 408: i=1
+task 408: i=2
+task 408: fim
+Task 408 exit: execution time 86786 ms, processor time 0 ms, 0 activations
+task 409: i=0
+task 409: i=1
+task 409: i=2
+task 409: fim
+Task 409 exit: execution time 86988 ms, processor time 0 ms, 0 activations
+task 410: i=0
+task 410: i=1
+task 410: i=2
+task 410: fim
+Task 410 exit: execution time 87190 ms, processor time 0 ms, 0 activations
+task 411: i=0
+task 411: i=1
+task 411: i=2
+task 411: fim
+Task 411 exit: execution time 87392 ms, processor time 0 ms, 0 activations
+task 412: i=0
+task 412: i=1
+task 412: i=2
+task 412: fim
+Task 412 exit: execution time 87596 ms, processor time 0 ms, 0 activations
+task 413: i=0
+task 413: i=1
+task 413: i=2
+task 413: fim
+Task 413 exit: execution time 87804 ms, processor time 0 ms, 0 activations
+task 414: i=0
+task 414: i=1
+task 414: i=2
+task 414: fim
+Task 414 exit: execution time 88007 ms, processor time 0 ms, 0 activations
+task 415: i=0
+task 415: i=1
+task 415: i=2
+task 415: fim
+Task 415 exit: execution time 88209 ms, processor time 0 ms, 0 activations
+task 416: i=0
+task 416: i=1
+task 416: i=2
+task 416: fim
+Task 416 exit: execution time 88410 ms, processor time 0 ms, 0 activations
+task 417: i=0
+task 417: i=1
+task 417: i=2
+task 417: fim
+Task 417 exit: execution time 88612 ms, processor time 0 ms, 0 activations
+task 418: i=0
+task 418: i=1
+task 418: i=2
+task 418: fim
+Task 418 exit: execution time 88815 ms, processor time 0 ms, 0 activations
+task 419: i=0
+task 419: i=1
+task 419: i=2
+task 419: fim
+Task 419 exit: execution time 89026 ms, processor time 0 ms, 0 activations
+task 420: i=0
+task 420: i=1
+task 420: i=2
+task 420: fim
+Task 420 exit: execution time 89238 ms, processor time 0 ms, 0 activations
+task 421: i=0
+task 421: i=1
+task 421: i=2
+task 421: fim
+Task 421 exit: execution time 89447 ms, processor time 0 ms, 0 activations
+task 422: i=0
+task 422: i=1
+task 422: i=2
+task 422: fim
+Task 422 exit: execution time 89655 ms, processor time 0 ms, 0 activations
+task 423: i=0
+task 423: i=1
+task 423: i=2
+task 423: fim
+Task 423 exit: execution time 89858 ms, processor time 0 ms, 0 activations
+task 424: i=0
+task 424: i=1
+task 424: i=2
+task 424: fim
+Task 424 exit: execution time 90060 ms, processor time 0 ms, 0 activations
+task 425: i=0
+task 425: i=1
+task 425: i=2
+task 425: fim
+Task 425 exit: execution time 90262 ms, processor time 0 ms, 0 activations
+task 426: i=0
+task 426: i=1
+task 426: i=2
+task 426: fim
+Task 426 exit: execution time 90464 ms, processor time 0 ms, 0 activations
+task 427: i=0
+task 427: i=1
+task 427: i=2
+task 427: fim
+Task 427 exit: execution time 90668 ms, processor time 0 ms, 0 activations
+task 428: i=0
+task 428: i=1
+task 428: i=2
+task 428: fim
+Task 428 exit: execution time 90870 ms, processor time 0 ms, 0 activations
+task 429: i=0
+task 429: i=1
+task 429: i=2
+task 429: fim
+Task 429 exit: execution time 91073 ms, processor time 0 ms, 0 activations
+task 430: i=0
+task 430: i=1
+task 430: i=2
+task 430: fim
+Task 430 exit: execution time 91277 ms, processor time 0 ms, 0 activations
+task 431: i=0
+task 431: i=1
+task 431: i=2
+task 431: fim
+Task 431 exit: execution time 91481 ms, processor time 0 ms, 0 activations
+task 432: i=0
+task 432: i=1
+task 432: i=2
+task 432: fim
+Task 432 exit: execution time 91685 ms, processor time 0 ms, 0 activations
+task 433: i=0
+task 433: i=1
+task 433: i=2
+task 433: fim
+Task 433 exit: execution time 91888 ms, processor time 0 ms, 0 activations
+task 434: i=0
+task 434: i=1
+task 434: i=2
+task 434: fim
+Task 434 exit: execution time 92091 ms, processor time 0 ms, 0 activations
+task 435: i=0
+task 435: i=1
+task 435: i=2
+task 435: fim
+Task 435 exit: execution time 92294 ms, processor time 0 ms, 0 activations
+task 436: i=0
+task 436: i=1
+task 436: i=2
+task 436: fim
+Task 436 exit: execution time 92496 ms, processor time 0 ms, 0 activations
+task 437: i=0
+task 437: i=1
+task 437: i=2
+task 437: fim
+Task 437 exit: execution time 92699 ms, processor time 0 ms, 0 activations
+task 438: i=0
+task 438: i=1
+task 438: i=2
+task 438: fim
+Task 438 exit: execution time 92901 ms, processor time 0 ms, 0 activations
+task 439: i=0
+task 439: i=1
+task 439: i=2
+task 439: fim
+Task 439 exit: execution time 93104 ms, processor time 0 ms, 0 activations
+task 440: i=0
+task 440: i=1
+task 440: i=2
+task 440: fim
+Task 440 exit: execution time 93306 ms, processor time 0 ms, 0 activations
+task 441: i=0
+task 441: i=1
+task 441: i=2
+task 441: fim
+Task 441 exit: execution time 93514 ms, processor time 0 ms, 0 activations
+task 442: i=0
+task 442: i=1
+task 442: i=2
+task 442: fim
+Task 442 exit: execution time 93723 ms, processor time 0 ms, 0 activations
+task 443: i=0
+task 443: i=1
+task 443: i=2
+task 443: fim
+Task 443 exit: execution time 93928 ms, processor time 0 ms, 0 activations
+task 444: i=0
+task 444: i=1
+task 444: i=2
+task 444: fim
+Task 444 exit: execution time 94132 ms, processor time 0 ms, 0 activations
+task 445: i=0
+task 445: i=1
+task 445: i=2
+task 445: fim
+Task 445 exit: execution time 94334 ms, processor time 0 ms, 0 activations
+task 446: i=0
+task 446: i=1
+task 446: i=2
+task 446: fim
+Task 446 exit: execution time 94536 ms, processor time 0 ms, 0 activations
+task 447: i=0
+task 447: i=1
+task 447: i=2
+task 447: fim
+Task 447 exit: execution time 94737 ms, processor time 0 ms, 0 activations
+task 448: i=0
+task 448: i=1
+task 448: i=2
+task 448: fim
+Task 448 exit: execution time 94939 ms, processor time 0 ms, 0 activations
+task 449: i=0
+task 449: i=1
+task 449: i=2
+task 449: fim
+Task 449 exit: execution time 95160 ms, processor time 0 ms, 0 activations
+task 450: i=0
+task 450: i=1
+task 450: i=2
+task 450: fim
+Task 450 exit: execution time 95388 ms, processor time 0 ms, 0 activations
+task 451: i=0
+task 451: i=1
+task 451: i=2
+task 451: fim
+Task 451 exit: execution time 95614 ms, processor time 0 ms, 0 activations
+task 452: i=0
+task 452: i=1
+task 452: i=2
+task 452: fim
+Task 452 exit: execution time 95826 ms, processor time 0 ms, 0 activations
+task 453: i=0
+task 453: i=1
+task 453: i=2
+task 453: fim
+Task 453 exit: execution time 96034 ms, processor time 0 ms, 0 activations
+task 454: i=0
+task 454: i=1
+task 454: i=2
+task 454: fim
+Task 454 exit: execution time 96236 ms, processor time 0 ms, 0 activations
+task 455: i=0
+task 455: i=1
+task 455: i=2
+task 455: fim
+Task 455 exit: execution time 96439 ms, processor time 0 ms, 0 activations
+task 456: i=0
+task 456: i=1
+task 456: i=2
+task 456: fim
+Task 456 exit: execution time 96642 ms, processor time 0 ms, 0 activations
+task 457: i=0
+task 457: i=1
+task 457: i=2
+task 457: fim
+Task 457 exit: execution time 96856 ms, processor time 0 ms, 0 activations
+task 458: i=0
+task 458: i=1
+task 458: i=2
+task 458: fim
+Task 458 exit: execution time 97064 ms, processor time 0 ms, 0 activations
+task 459: i=0
+task 459: i=1
+task 459: i=2
+task 459: fim
+Task 459 exit: execution time 97266 ms, processor time 0 ms, 0 activations
+task 460: i=0
+task 460: i=1
+task 460: i=2
+task 460: fim
+Task 460 exit: execution time 97470 ms, processor time 0 ms, 0 activations
+task 461: i=0
+task 461: i=1
+task 461: i=2
+task 461: fim
+Task 461 exit: execution time 97674 ms, processor time 0 ms, 0 activations
+task 462: i=0
+task 462: i=1
+task 462: i=2
+task 462: fim
+Task 462 exit: execution time 97880 ms, processor time 0 ms, 0 activations
+task 463: i=0
+task 463: i=1
+task 463: i=2
+task 463: fim
+Task 463 exit: execution time 98084 ms, processor time 0 ms, 0 activations
+task 464: i=0
+task 464: i=1
+task 464: i=2
+task 464: fim
+Task 464 exit: execution time 98290 ms, processor time 0 ms, 0 activations
+task 465: i=0
+task 465: i=1
+task 465: i=2
+task 465: fim
+Task 465 exit: execution time 98492 ms, processor time 0 ms, 0 activations
+task 466: i=0
+task 466: i=1
+task 466: i=2
+task 466: fim
+Task 466 exit: execution time 98695 ms, processor time 0 ms, 0 activations
+task 467: i=0
+task 467: i=1
+task 467: i=2
+task 467: fim
+Task 467 exit: execution time 98898 ms, processor time 0 ms, 0 activations
+task 468: i=0
+task 468: i=1
+task 468: i=2
+task 468: fim
+Task 468 exit: execution time 99102 ms, processor time 0 ms, 0 activations
+task 469: i=0
+task 469: i=1
+task 469: i=2
+task 469: fim
+Task 469 exit: execution time 99307 ms, processor time 0 ms, 0 activations
+task 470: i=0
+task 470: i=1
+task 470: i=2
+task 470: fim
+Task 470 exit: execution time 99510 ms, processor time 0 ms, 0 activations
+task 471: i=0
+task 471: i=1
+task 471: i=2
+task 471: fim
+Task 471 exit: execution time 99712 ms, processor time 0 ms, 0 activations
+task 472: i=0
+task 472: i=1
+task 472: i=2
+task 472: fim
+Task 472 exit: execution time 99915 ms, processor time 0 ms, 0 activations
+task 473: i=0
+task 473: i=1
+task 473: i=2
+task 473: fim
+Task 473 exit: execution time 100117 ms, processor time 0 ms, 0 activations
+task 474: i=0
+task 474: i=1
+task 474: i=2
+task 474: fim
+Task 474 exit: execution time 100320 ms, processor time 0 ms, 0 activations
+task 475: i=0
+task 475: i=1
+task 475: i=2
+task 475: fim
+Task 475 exit: execution time 100524 ms, processor time 0 ms, 0 activations
+task 476: i=0
+task 476: i=1
+task 476: i=2
+task 476: fim
+Task 476 exit: execution time 100728 ms, processor time 0 ms, 0 activations
+task 477: i=0
+task 477: i=1
+task 477: i=2
+task 477: fim
+Task 477 exit: execution time 100932 ms, processor time 0 ms, 0 activations
+task 478: i=0
+task 478: i=1
+task 478: i=2
+task 478: fim
+Task 478 exit: execution time 101134 ms, processor time 0 ms, 0 activations
+task 479: i=0
+task 479: i=1
+task 479: i=2
+task 479: fim
+Task 479 exit: execution time 101338 ms, processor time 0 ms, 0 activations
+task 480: i=0
+task 480: i=1
+task 480: i=2
+task 480: fim
+Task 480 exit: execution time 101540 ms, processor time 0 ms, 0 activations
+task 481: i=0
+task 481: i=1
+task 481: i=2
+task 481: fim
+Task 481 exit: execution time 101743 ms, processor time 0 ms, 0 activations
+task 482: i=0
+task 482: i=1
+task 482: i=2
+task 482: fim
+Task 482 exit: execution time 101947 ms, processor time 0 ms, 0 activations
+task 483: i=0
+task 483: i=1
+task 483: i=2
+task 483: fim
+Task 483 exit: execution time 102151 ms, processor time 0 ms, 0 activations
+task 484: i=0
+task 484: i=1
+task 484: i=2
+task 484: fim
+Task 484 exit: execution time 102354 ms, processor time 0 ms, 0 activations
+task 485: i=0
+task 485: i=1
+task 485: i=2
+task 485: fim
+Task 485 exit: execution time 102557 ms, processor time 0 ms, 0 activations
+task 486: i=0
+task 486: i=1
+task 486: i=2
+task 486: fim
+Task 486 exit: execution time 102760 ms, processor time 0 ms, 0 activations
+task 487: i=0
+task 487: i=1
+task 487: i=2
+task 487: fim
+Task 487 exit: execution time 102963 ms, processor time 0 ms, 0 activations
+task 488: i=0
+task 488: i=1
+task 488: i=2
+task 488: fim
+Task 488 exit: execution time 103167 ms, processor time 0 ms, 0 activations
+task 489: i=0
+task 489: i=1
+task 489: i=2
+task 489: fim
+Task 489 exit: execution time 103369 ms, processor time 0 ms, 0 activations
+task 490: i=0
+task 490: i=1
+task 490: i=2
+task 490: fim
+Task 490 exit: execution time 103571 ms, processor time 0 ms, 0 activations
+task 491: i=0
+task 491: i=1
+task 491: i=2
+task 491: fim
+Task 491 exit: execution time 103775 ms, processor time 0 ms, 0 activations
+task 492: i=0
+task 492: i=1
+task 492: i=2
+task 492: fim
+Task 492 exit: execution time 103981 ms, processor time 0 ms, 0 activations
+task 493: i=0
+task 493: i=1
+task 493: i=2
+task 493: fim
+Task 493 exit: execution time 104184 ms, processor time 0 ms, 0 activations
+task 494: i=0
+task 494: i=1
+task 494: i=2
+task 494: fim
+Task 494 exit: execution time 104384 ms, processor time 0 ms, 0 activations
+task 495: i=0
+task 495: i=1
+task 495: i=2
+task 495: fim
+Task 495 exit: execution time 104585 ms, processor time 0 ms, 0 activations
+task 496: i=0
+task 496: i=1
+task 496: i=2
+task 496: fim
+Task 496 exit: execution time 104787 ms, processor time 0 ms, 0 activations
+task 497: i=0
+task 497: i=1
+task 497: i=2
+task 497: fim
+Task 497 exit: execution time 105000 ms, processor time 0 ms, 0 activations
+task 498: i=0
+task 498: i=1
+task 498: i=2
+task 498: fim
+Task 498 exit: execution time 105257 ms, processor time 0 ms, 0 activations
+task 499: i=0
+task 499: i=1
+task 499: i=2
+task 499: fim
+Task 499 exit: execution time 105515 ms, processor time 0 ms, 0 activations
+task 500: i=0
+task 500: i=1
+task 500: i=2
+task 500: fim
+Task 500 exit: execution time 105730 ms, processor time 0 ms, 0 activations
+task 501: i=0
+task 501: i=1
+task 501: i=2
+task 501: fim
+Task 501 exit: execution time 105945 ms, processor time 0 ms, 0 activations
+Task 1 exit: execution time 105946 ms, processor time 0 ms, 500 activations
+main: fim
