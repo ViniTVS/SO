@@ -80,7 +80,7 @@ void dispatcher_func(){
 
 void task_yield (){
     
-    if( currentTask != &mainTask && currentTask != &dispatcher ){
+    if( currentTask->sys_task == 0){
         #ifdef DEBUG
             printf("%d é tarefa do usuário \n", currentTask->id);
         #endif
@@ -126,6 +126,7 @@ void tratador (){
         return;
 
     if(currentTask->quantum == 0){
+        // contabilizo o tempo de execução da tarefa 
         currentTask->cpu_time += systime() - startTime;
         task_yield();
     } else {
@@ -164,14 +165,13 @@ void ppos_init(){
     }
 
     // ajusta valores do temporizador
-    timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
-    timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
-    timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
-    timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+    timer.it_value.tv_usec = 1000 ;         // primeiro disparo, em micro-segundos
+    timer.it_value.tv_sec  = 0 ;            // primeiro disparo, em segundos
+    timer.it_interval.tv_usec = 1000 ;      // disparos subsequentes, em micro-segundos
+    timer.it_interval.tv_sec  = 0 ;         // disparos subsequentes, em segundos
 
     // arma o temporizador ITIMER_REAL (vide man setitimer)
-    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
-    {
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0){
         perror ("Erro em setitimer: ") ;
         exit (1) ;
     }
@@ -258,8 +258,8 @@ int task_switch(task_t *task){
         perror ("Erro na troca da tarefa. Tarefa é NULL.\n");
         return -1;
     }
-    
-    currentTask->activations++;
+    // tarefa foi acionada, então ajusto o quantum e o tempo em que inicia
+    currentTask->activations++; 
     startTime = systime();
     if (currentTask->sys_task != 1){
         currentTask->quantum = QUANTUM_TICKS;

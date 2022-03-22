@@ -1,4 +1,6 @@
+// GRR20186716 Vinícius Teixeira Vieira dos Santos
 // PingPongOS - PingPong Operating System
+// Versão original cedida por:
 // Prof. Carlos A. Maziero, DINF UFPR
 // Versão 1.4 -- Janeiro de 2022
 
@@ -16,7 +18,7 @@
 
 //? Definição de constantes próprias
 #define STACKSIZE 64*1024	/* tamanho de pilha das threads (contexts.c)*/
-#define QUANTUM_TICKS 420	/* tamanho de pilha das threads (contexts.c)*/
+#define QUANTUM_TICKS 20	/* tamanho de pilha das threads (contexts.c)*/
 
 // Estrutura que define um Task Control Block (TCB)
 typedef struct task_t
