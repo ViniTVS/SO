@@ -149,9 +149,14 @@ void ppos_init(){
     mainTask.exec_time = systime();
     mainTask.cpu_time = 0;
     mainTask.activations = 0;
-    mainTask.sys_task = 1;  // é uma tarefa de sistema
+    mainTask.sys_task = 0;  // é uma tarefa de sistema
+    // agora main tem contexto e quantum (P7)
+    mainTask.quantum = QUANTUM_TICKS; 
+    getcontext (&(mainTask.context));
+
     // Define a tarefa atual sendo a main 
     currentTask = &mainTask;
+
     // cria o dispatcher:
     task_create(&dispatcher,(void*) dispatcher_func, NULL);
 
@@ -175,7 +180,7 @@ void ppos_init(){
         perror ("Erro em setitimer: ") ;
         exit (1) ;
     }
-    
+    task_yield(); // adiciona na queue
 }
 
 int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
@@ -218,7 +223,7 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     // Crio o contexto
     makecontext(&(task->context), (void *)(*start_routine), 1, arg);
     // adiciono à fila de prontos se não for o dispatcher ou a main
-    if (task != &dispatcher && task != &mainTask){
+    if (task != &dispatcher){
         #ifdef DEBUG
             printf("%d é tarefa do usuário \n", task->id);
         #endif
@@ -247,7 +252,6 @@ void task_exit(int exitCode){
     // se a tarefa sendo finalizada for o dispatcher, volto pra main
     if(currentTask == &dispatcher){
         free (dispatcher.context.uc_stack.ss_sp);
-        task_switch(&mainTask);
         return;
     }
     task_switch(&dispatcher);

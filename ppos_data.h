@@ -18,7 +18,7 @@
 
 //? Definição de constantes próprias
 #define STACKSIZE 64*1024	/* tamanho de pilha das threads (contexts.c)*/
-#define QUANTUM_TICKS 20	/* tamanho de pilha das threads (contexts.c)*/
+#define QUANTUM_TICKS 15	/* tamanho de pilha das threads (contexts.c)*/
 
 // Estrutura que define um Task Control Block (TCB)
 typedef struct task_t
