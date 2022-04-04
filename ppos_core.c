@@ -9,9 +9,9 @@ task_t mainTask;        // tareda da main
 task_t *currentTask;    // tarefa atual
 int userTasks;          // número de tarefas (sem contabilizar a main)
 /* status da tarefa:
-   -1: suspensa
     0: terminada
     1: pronta
+    2: suspensa
 */
 
 //? gerenciamento dispatcher:
@@ -81,9 +81,6 @@ void dispatcher_func(){
 void task_yield (){
     
     if( currentTask->sys_task == 0){
-        #ifdef DEBUG
-            printf("%d é tarefa do usuário \n", currentTask->id);
-        #endif
         if (queue_append((queue_t **) &readyQueue, (queue_t *)currentTask) < 0){
             perror ("Erro ao adicionar tarefa na fila de prontos\n");
             exit(-1);        
@@ -215,7 +212,8 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     task->activations = 0;
     task->sys_task = 0;  // é uma tarefa do usuário
     task->quantum = 0;  // presumo primeiro que a tarefa é do sistema
-
+    task->suspendQueue = NULL;  // fila de suspensas vazia
+    task->exit_code = 0;
     // Para criar um ID "único", uso o número de tarefas atuais + 1 
     // (isso pode ocasionar ou não em problemas com overflow)
     userTasks++;
@@ -224,9 +222,6 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     makecontext(&(task->context), (void *)(*start_routine), 1, arg);
     // adiciono à fila de prontos se não for o dispatcher ou a main
     if (task != &dispatcher){
-        #ifdef DEBUG
-            printf("%d é tarefa do usuário \n", task->id);
-        #endif
         task->quantum = QUANTUM_TICKS; // ajusto quantum pra tarefa do usuário
 
         if (queue_append((queue_t **) &readyQueue, (queue_t *) task) < 0){
@@ -249,6 +244,15 @@ void task_exit(int exitCode){
     
     printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
 	    currentTask->id, currentTask->exec_time, currentTask->cpu_time, currentTask->activations);
+
+    // enquanto tiver tarefas esperando por esta
+    while (queue_size((queue_t *) currentTask->suspendQueue) > 0){
+        // aux recebe a próxima tarefa
+        task_t * aux = currentTask->suspendQueue;
+        task_resume(aux, &(currentTask->suspendQueue));
+        aux->exit_code = exitCode; 
+    }
+    
     // se a tarefa sendo finalizada for o dispatcher, volto pra main
     if(currentTask == &dispatcher){
         free (dispatcher.context.uc_stack.ss_sp);
@@ -265,7 +269,7 @@ int task_switch(task_t *task){
     // tarefa foi acionada, então ajusto o quantum e o tempo em que inicia
     currentTask->activations++; 
     startTime = systime();
-    if (currentTask->sys_task != 1){
+    if (currentTask->sys_task == 0){
         currentTask->quantum = QUANTUM_TICKS;
     }
 	else {
@@ -279,4 +283,48 @@ int task_switch(task_t *task){
 
 	return(0);
     
+}
+
+// A chamada task_join(b) faz com que a tarefa atual seja suspensa até a conclusão da tarefa b
+int task_join (task_t *task){
+    if (task == NULL){
+        return -1;
+    }
+	if (task->status == 0 )
+		return task->exit_code;	
+
+    #ifdef DEBUG
+        printf("task_join da tarefa %d e da tarefa atual %d \n", task->id, currentTask->id);
+    #endif
+    task_suspend (&(task->suspendQueue));
+    return(currentTask->exit_code);
+}
+
+void task_suspend (task_t **queue){
+    
+    #ifdef DEBUG
+        printf("Suspendendo a tarefa atual %d \n", currentTask->id);
+    #endif
+    queue_remove((queue_t **) &readyQueue, (queue_t *) currentTask);
+    currentTask->status = 2;
+
+    if (queue_append((queue_t **) queue, (queue_t *)currentTask) < 0){
+        perror ("Erro ao adicionar tarefa na fila de suspensas\n");
+        exit(-1);        
+    }
+    task_switch(&dispatcher);
+}
+
+void task_resume (task_t * task, task_t **queue){
+    // remove da queue
+    if (queue_remove((queue_t **) queue, (queue_t *) task) < 0){
+        perror ("Erro ao remover tarefa na fila de suspensas em task_exit\n");
+        exit(-1);        
+    }
+    task->status = 1; // upd status
+    // devolve à fila de prontas
+    if (queue_append((queue_t **)&readyQueue, (queue_t *) task) < 0){
+        perror ("Erro ao adicionar tarefa na fila de prontas em task_exit\n");
+        exit(-1);        
+    }
 }

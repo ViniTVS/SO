@@ -35,6 +35,8 @@ typedef struct task_t
   unsigned int cpu_time;        // tempo de uso de CPU
   unsigned int activations;     // vezes que foi ativada
   int sys_task;                 // se a tarefa é do sistema ou não (usuário)
+  int exit_code;                // código de saída da tarefa
+  struct task_t *suspendQueue; // fila de tarefas a qual deve esperar  
    // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 
