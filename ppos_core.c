@@ -63,9 +63,6 @@ void dispatcher_func(){
     int ready_size = queue_size((queue_t *) readyQueue);
     int sleep_size = queue_size((queue_t *) sleepQueue);
     while(ready_size || sleep_size){
-        #ifdef DEBUG
-            printf("readyQueue: %d\tsleepQueue: %d\n", ready_size, sleep_size);
-        #endif
         // busca a task pronta para executá-la
         if (ready_size){
             nextTask = scheduler();
@@ -86,10 +83,6 @@ void dispatcher_func(){
             task_t *aux = sleepQueue;
             task_t *remove_task;
             for (int i = 0; i < sleep_size; i++){
-
-                #ifdef DEBUG
-                    printf("aux id: %d, que acorda %u\n\tagora são %u\n", aux->id, aux->wakeup_time, systime());
-                #endif
                 if ( systime() >= aux->wakeup_time ){
                     remove_task = aux;
                     aux = aux -> next;
@@ -110,6 +103,9 @@ void dispatcher_func(){
         }
         ready_size = queue_size((queue_t *) readyQueue);
         sleep_size = queue_size((queue_t *) sleepQueue);
+        // por algum motivo ele não executa o tratador sem este task_switch...
+        if (!ready_size && sleep_size)
+            task_switch(&dispatcher);
     }
 
     task_exit(0);
@@ -152,11 +148,7 @@ unsigned int systime () {
 }
 
 void tratador (){
-
     time+=100;
-    #ifdef DEBUG
-        printf("Estou no tratador. time: %u\n", time);
-    #endif
     currentTask->cpu_time+=100;
     // ignoro se é uma tarefa de sistema 
     if (currentTask->sys_task == 1)
@@ -359,9 +351,7 @@ void task_resume (task_t * task, task_t **queue){
 void task_sleep (int t){
 	currentTask->status = 2;
     currentTask->wakeup_time = systime() + t;
-    #ifdef DEBUG
-        printf("Pondo %d para dormir até %u (agora são %u)\n", currentTask->id, currentTask->wakeup_time, systime());
-    #endif
+    
     if (queue_remove((queue_t **)&readyQueue, (queue_t *)currentTask) < 0){
         // perror ("Erro ao adicionar tarefa na fila a mimir\n");
         // exit(-1);        
