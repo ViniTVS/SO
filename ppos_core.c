@@ -17,7 +17,8 @@ int userTasks;          // número de tarefas (sem contabilizar a main)
 //? gerenciamento dispatcher:
 task_t dispatcher;      
 task_t *dispatcherTask; // tarefa atual do dispatcher
-task_t *readyQueue;     // fila de prontas
+task_t *readyQueue;     // fila de tarefas prontas
+task_t *sleepQueue;     // fila de tarefas dormentes
 //? gerenciamento do tempo:
 unsigned int time = 0, startTime = 0;  
 struct sigaction action ;
@@ -58,28 +59,63 @@ task_t *scheduler(){
 }
 
 void dispatcher_func(){
-
     task_t *nextTask;
-    while(queue_size((queue_t *) readyQueue) > 0){
-        nextTask = scheduler();
+    int ready_size = queue_size((queue_t *) readyQueue);
+    int sleep_size = queue_size((queue_t *) sleepQueue);
+    while(ready_size || sleep_size){
+        #ifdef DEBUG
+            printf("readyQueue: %d\tsleepQueue: %d\n", ready_size, sleep_size);
+        #endif
+        // busca a task pronta para executá-la
+        if (ready_size){
+            nextTask = scheduler();
 
-        if (nextTask != NULL){
-            if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
-                perror ("Erro ao remover tarefa na fila de prontos\n");
-                exit(-1);        
+            if (nextTask != NULL){
+                if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
+                    perror ("Erro ao remover tarefa na fila de prontos\n");
+                    exit(-1);        
+                }
+                task_switch(nextTask);
+                // se a tarefa foi terminada, libero a mem. alocada pelo contexto 
+                if (nextTask->status == 0)
+                    free(nextTask->context.uc_stack.ss_sp);
             }
-            task_switch(nextTask);
-            // se a tarefa foi terminada, libero a mem. alocada pelo contexto 
-            if (nextTask->status == 0)
-                free(nextTask->context.uc_stack.ss_sp);
         }
+        // busca se alguma task dormindo deve acordar
+        if (sleep_size){
+            task_t *aux = sleepQueue;
+            task_t *remove_task;
+            for (int i = 0; i < sleep_size; i++){
+
+                #ifdef DEBUG
+                    printf("aux id: %d, que acorda %u\n\tagora são %u\n", aux->id, aux->wakeup_time, systime());
+                #endif
+                if ( systime() >= aux->wakeup_time ){
+                    remove_task = aux;
+                    aux = aux -> next;
+                    if (queue_remove((queue_t **) &sleepQueue, (queue_t *) remove_task) < 0){
+                        perror ("Erro ao remover tarefa na fila a mimir em dispatcher_func\n");
+                        exit(-1);        
+                    }
+                    if (queue_append((queue_t **) &readyQueue, (queue_t *) remove_task) < 0){
+                        perror ("Erro ao adicionar tarefa na fila de prontos em dispatcher_func\n");
+                        exit(-1);        
+                    }
+                    remove_task->status = 1;
+                }
+                else{
+                    aux = aux -> next;
+                }
+            }
+        }
+        ready_size = queue_size((queue_t *) readyQueue);
+        sleep_size = queue_size((queue_t *) sleepQueue);
     }
 
     task_exit(0);
 }
 
 void task_yield (){
-    
     if( currentTask->sys_task == 0){
         if (queue_append((queue_t **) &readyQueue, (queue_t *)currentTask) < 0){
             perror ("Erro ao adicionar tarefa na fila de prontos\n");
@@ -105,7 +141,6 @@ void task_setprio (task_t *task, int prio){
 }
 
 int task_getprio (task_t *task){
-    
     if (task == NULL)
         return currentTask->static_prio;
     
@@ -116,8 +151,13 @@ unsigned int systime () {
 	return time;
 }
 
-
 void tratador (){
+
+    time+=100;
+    #ifdef DEBUG
+        printf("Estou no tratador. time: %u\n", time);
+    #endif
+    currentTask->cpu_time+=100;
     // ignoro se é uma tarefa de sistema 
     if (currentTask->sys_task == 1)
         return;
@@ -130,7 +170,6 @@ void tratador (){
         currentTask->quantum--;
     }
 
-    time++;
 }
 
 void ppos_init(){
@@ -233,7 +272,6 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
     return (task->id);
 }
 
-
 int task_id(){
     return (currentTask->id);
 }
@@ -272,11 +310,6 @@ int task_switch(task_t *task){
     if (currentTask->sys_task == 0){
         currentTask->quantum = QUANTUM_TICKS;
     }
-	else {
-        #ifdef DEBUG
-            printf("%d é tarefa do usuário \n", task->id);
-        #endif
-    }
     task_t *aux = currentTask;
 	currentTask = task;
 	swapcontext (&aux->context, &task->context);
@@ -293,18 +326,12 @@ int task_join (task_t *task){
 	if (task->status == 0 )
 		return task->exit_code;	
 
-    #ifdef DEBUG
-        printf("task_join da tarefa %d e da tarefa atual %d \n", task->id, currentTask->id);
-    #endif
     task_suspend (&(task->suspendQueue));
     return(currentTask->exit_code);
 }
 
 void task_suspend (task_t **queue){
-    
-    #ifdef DEBUG
-        printf("Suspendendo a tarefa atual %d \n", currentTask->id);
-    #endif
+    // remove da tarefa corrente (caso esteja lá) e insere na fila de adormecida
     queue_remove((queue_t **) &readyQueue, (queue_t *) currentTask);
     currentTask->status = 2;
 
@@ -316,15 +343,32 @@ void task_suspend (task_t **queue){
 }
 
 void task_resume (task_t * task, task_t **queue){
-    // remove da queue
+    // remove da queue de adormecida e devolve à de prontos
     if (queue_remove((queue_t **) queue, (queue_t *) task) < 0){
         perror ("Erro ao remover tarefa na fila de suspensas em task_exit\n");
         exit(-1);        
     }
     task->status = 1; // upd status
-    // devolve à fila de prontas
+    
     if (queue_append((queue_t **)&readyQueue, (queue_t *) task) < 0){
         perror ("Erro ao adicionar tarefa na fila de prontas em task_exit\n");
         exit(-1);        
     }
+}
+
+void task_sleep (int t){
+	currentTask->status = 2;
+    currentTask->wakeup_time = systime() + t;
+    #ifdef DEBUG
+        printf("Pondo %d para dormir até %u (agora são %u)\n", currentTask->id, currentTask->wakeup_time, systime());
+    #endif
+    if (queue_remove((queue_t **)&readyQueue, (queue_t *)currentTask) < 0){
+        // perror ("Erro ao adicionar tarefa na fila a mimir\n");
+        // exit(-1);        
+    }
+    if (queue_append((queue_t **)&sleepQueue, (queue_t *)currentTask) < 0){
+        perror ("Erro ao adicionar tarefa na fila a mimir\n");
+        exit(-1);        
+    }
+    task_switch(&dispatcher);
 }

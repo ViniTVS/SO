@@ -18,7 +18,7 @@
 
 //? Definição de constantes próprias
 #define STACKSIZE 64*1024	/* tamanho de pilha das threads (contexts.c)*/
-#define QUANTUM_TICKS 15	/* tamanho de pilha das threads (contexts.c)*/
+#define QUANTUM_TICKS 10	/* tamanho de pilha das threads (contexts.c)*/
 
 // Estrutura que define um Task Control Block (TCB)
 typedef struct task_t
@@ -33,6 +33,7 @@ typedef struct task_t
   int quantum;                  // quantum da tarefa
   unsigned int exec_time;       // tempo de execução
   unsigned int cpu_time;        // tempo de uso de CPU
+  unsigned int wakeup_time;     // tempo que a tarefa volta de suspensa
   unsigned int activations;     // vezes que foi ativada
   int sys_task;                 // se a tarefa é do sistema ou não (usuário)
   int exit_code;                // código de saída da tarefa
@@ -63,27 +64,6 @@ typedef struct
 {
   // preencher quando necessário
 } mqueue_t ;
-
-
-//? gerenciamento das tarefas:
-extern task_t mainTask;        // tareda da main 
-extern task_t *currentTask;    // tarefa atual
-extern int userTasks;          // número de tarefas (sem contabilizar a main)
-/* status da tarefa:
-   -1: suspensa
-    0: terminada
-    1: pronta
-*/
-
-//? gerenciamento dispatcher:
-extern task_t dispatcher;      
-extern task_t *dispatcherTask; // tarefa atual do dispatcher
-extern task_t *readyQueue;     // fila de prontas
-//? gerenciamento de tempo:
-extern unsigned int time, startTime;  
-extern struct sigaction action ;
-extern struct itimerval timer;
-
 
 #endif
 
