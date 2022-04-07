@@ -148,8 +148,8 @@ unsigned int systime () {
 }
 
 void tratador (){
-    time+=100;
-    currentTask->cpu_time+=100;
+    time++;
+    currentTask->cpu_time++;
     // ignoro se é uma tarefa de sistema 
     if (currentTask->sys_task == 1)
         return;
