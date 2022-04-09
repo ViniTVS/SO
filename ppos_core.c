@@ -15,8 +15,7 @@ int userTasks;          // número de tarefas (sem contabilizar a main)
 */
 
 //? gerenciamento dispatcher:
-task_t dispatcher;      
-task_t *dispatcherTask; // tarefa atual do dispatcher
+task_t dispatcher;      // tarefa atual do dispatcher
 task_t *readyQueue;     // fila de tarefas prontas
 task_t *sleepQueue;     // fila de tarefas dormentes
 //? gerenciamento do tempo:
@@ -44,14 +43,12 @@ task_t *scheduler(){
     }while(aux != readyQueue);
     
     // atualizo a prioridade dinâmica
-    aux = priorityTask->next;
-    
+    aux = priorityTask->next;    
     while(aux != priorityTask){
         if (aux->din_prio > -20)
             aux->din_prio--;
         aux = aux->next;
-    } 
-
+    }
     // como a tarefa será executada, din_prio volta a ser igual à static
     priorityTask->din_prio = priorityTask->static_prio;
 
@@ -60,14 +57,16 @@ task_t *scheduler(){
 
 void dispatcher_func(){
     task_t *nextTask;
-    int ready_size = queue_size((queue_t *) readyQueue);
-    int sleep_size = queue_size((queue_t *) sleepQueue);
-    while(ready_size || sleep_size){
+    #ifdef DEBUG
+        printf("Estou no dispatcher!\n");
+    #endif
+    
+    while(readyQueue || sleepQueue){
         // busca a task pronta para executá-la
-        if (ready_size){
+        if (readyQueue){
             nextTask = scheduler();
 
-            if (nextTask != NULL){
+            if (nextTask){
                 if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
                     perror ("Erro ao remover tarefa na fila de prontos\n");
                     exit(-1);        
@@ -79,11 +78,17 @@ void dispatcher_func(){
             }
         }
         // busca se alguma task dormindo deve acordar
-        if (sleep_size){
+        if (sleepQueue){
+            #ifdef DEBUG
+                printf("\tAinda tem %d tarefa(s) dormindo\n", queue_size((queue_t *) sleepQueue));
+            #endif
             task_t *aux = sleepQueue;
             task_t *remove_task;
-            for (int i = 0; i < sleep_size; i++){
+            for (int i = 0; i < queue_size((queue_t *) sleepQueue); i++){
                 if ( systime() >= aux->wakeup_time ){
+                    #ifdef DEBUG
+                        printf("\tAinda tem %d tarefa(s) dormindo\n", queue_size((queue_t *) sleepQueue));
+                    #endif
                     remove_task = aux;
                     aux = aux -> next;
                     if (queue_remove((queue_t **) &sleepQueue, (queue_t *) remove_task) < 0){
@@ -95,17 +100,14 @@ void dispatcher_func(){
                         exit(-1);        
                     }
                     remove_task->status = 1;
-                }
-                else{
+                } else {
                     aux = aux -> next;
                 }
             }
         }
-        ready_size = queue_size((queue_t *) readyQueue);
-        sleep_size = queue_size((queue_t *) sleepQueue);
         // por algum motivo ele não executa o tratador sem este task_switch...
-        if (!ready_size && sleep_size)
-            task_switch(&dispatcher);
+        // if (!readyQueue && sleepQueue)
+        //     task_switch(&dispatcher);
     }
 
     task_exit(0);
@@ -129,8 +131,7 @@ void task_setprio (task_t *task, int prio){
     if (task != NULL){
         task->static_prio = prio;
         task->din_prio = prio;
-    }
-    else{
+    } else {
         currentTask->static_prio = prio;
         currentTask->din_prio = prio;
     }
@@ -154,7 +155,7 @@ void tratador (){
     if (currentTask->sys_task == 1)
         return;
 
-    if(currentTask->quantum == 0){
+    if(currentTask->quantum <= 0){
         // contabilizo o tempo de execução da tarefa 
         currentTask->cpu_time += systime() - startTime;
         task_yield();
@@ -187,6 +188,10 @@ void ppos_init(){
 
     // cria o dispatcher:
     task_create(&dispatcher,(void*) dispatcher_func, NULL);
+    #ifdef DEBUG
+        printf("Estou no ppos_init!\n");
+    #endif
+    dispatcher.sys_task = 1;
 
     // registra a ação para o sinal de timer SIGALRM
     action.sa_handler = tratador ;

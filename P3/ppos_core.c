@@ -55,7 +55,6 @@ task_t *scheduler(){
 }
 
 void dispatcher_func(){
-
     task_t *nextTask;
     while(queue_size((queue_t *) readyQueue) > 0){
         nextTask = scheduler();
