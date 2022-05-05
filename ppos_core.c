@@ -7,7 +7,8 @@
 //? gerenciamento das tarefas:
 task_t mainTask;        // tareda da main 
 task_t *currentTask;    // tarefa atual
-int userTasks;          // número de tarefas (sem contabilizar a main)
+int taskNumber = 0;     // número de tarefas "vivas" 
+int userTasks;          // número de tarefas criadas p/ gerar seus códigos
 /* status da tarefa:
     0: terminada
     1: pronta
@@ -18,9 +19,10 @@ int userTasks;          // número de tarefas (sem contabilizar a main)
 task_t dispatcher;      // tarefa atual do dispatcher
 task_t *readyQueue;     // fila de tarefas prontas
 task_t *sleepQueue;     // fila de tarefas dormentes
+
 //? gerenciamento do tempo:
 unsigned int time = 0, startTime = 0;  
-struct sigaction action ;
+struct sigaction action;
 struct itimerval timer;
 
 // Política de escalonamento para decidir qual a próxima tarefa a ativar
@@ -61,36 +63,29 @@ void dispatcher_func(){
         printf("Estou no dispatcher!\n");
     #endif
     
-    while(readyQueue || sleepQueue){
+    while(taskNumber){
         // busca a task pronta para executá-la
-        if (readyQueue){
-            nextTask = scheduler();
+        nextTask = scheduler();
 
-            if (nextTask){
-                if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
-                    perror ("Erro ao remover tarefa na fila de prontos\n");
-                    exit(-1);        
-                }
-                task_switch(nextTask);
-                // se a tarefa foi terminada, libero a mem. alocada pelo contexto 
-                if (nextTask->status == 0)
-                    free(nextTask->context.uc_stack.ss_sp);
+        if (nextTask){
+            if (queue_remove((queue_t **) &readyQueue, (queue_t *) nextTask) < 0){
+                perror ("Erro ao remover tarefa na fila de prontos\n");
+                exit(-1);        
             }
+            task_switch(nextTask);
+            // se a tarefa foi terminada, libero a mem. alocada pelo contexto 
+            if (nextTask->status == 0)
+                free(nextTask->context.uc_stack.ss_sp);
         }
         // busca se alguma task dormindo deve acordar
         if (sleepQueue){
-            #ifdef DEBUG
-                printf("\tAinda tem %d tarefa(s) dormindo\n", queue_size((queue_t *) sleepQueue));
-            #endif
             task_t *aux = sleepQueue;
             task_t *remove_task;
-            for (int i = 0; i < queue_size((queue_t *) sleepQueue); i++){
+            do {
                 if ( systime() >= aux->wakeup_time ){
-                    #ifdef DEBUG
-                        printf("\tAinda tem %d tarefa(s) dormindo\n", queue_size((queue_t *) sleepQueue));
-                    #endif
                     remove_task = aux;
-                    aux = aux -> next;
+                    aux = aux -> next; // faz a troca pois a variável vai perder a ref. de next
+                    // remove a tarefa da fila de dormindo e coloca na de prontas
                     if (queue_remove((queue_t **) &sleepQueue, (queue_t *) remove_task) < 0){
                         perror ("Erro ao remover tarefa na fila a mimir em dispatcher_func\n");
                         exit(-1);        
@@ -103,17 +98,14 @@ void dispatcher_func(){
                 } else {
                     aux = aux -> next;
                 }
-            }
+            } while (aux != sleepQueue && sleepQueue);
         }
-        // por algum motivo ele não executa o tratador sem este task_switch...
-        // if (!readyQueue && sleepQueue)
-        //     task_switch(&dispatcher);
     }
 
     task_exit(0);
 }
 
-void task_yield (){
+void task_yield(){
     if( currentTask->sys_task == 0){
         if (queue_append((queue_t **) &readyQueue, (queue_t *)currentTask) < 0){
             perror ("Erro ao adicionar tarefa na fila de prontos\n");
@@ -123,7 +115,7 @@ void task_yield (){
     task_switch(&dispatcher);
 }
 
-void task_setprio (task_t *task, int prio){
+void task_setprio(task_t *task, int prio){
     // ignoro se a prioridade não for dentro do limite
     if (prio > 20 || prio < -20)
         return;
@@ -137,18 +129,18 @@ void task_setprio (task_t *task, int prio){
     }
 }
 
-int task_getprio (task_t *task){
+int task_getprio(task_t *task){
     if (task == NULL)
         return currentTask->static_prio;
     
     return task->static_prio;
 }
 
-unsigned int systime () {
+unsigned int systime() {
 	return time;
 }
 
-void tratador (){
+void tratador(){
     time++;
     currentTask->cpu_time++;
     // ignoro se é uma tarefa de sistema 
@@ -172,7 +164,7 @@ void ppos_init(){
     mainTask.next = NULL;
     mainTask.prev = NULL;
     mainTask.id = 0;    // id 0 por ser main    
-    userTasks = 0;    // número de tarefas existentes além da main
+    userTasks = 0;      // número de tarefas existentes além da main
     time = 0;           // tempo de execução começa a contar aqui
     // temporizadores
     mainTask.exec_time = systime();
@@ -216,7 +208,7 @@ void ppos_init(){
     task_yield(); // adiciona na queue
 }
 
-int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
+int task_create(task_t *task, void (*start_routine)(void *),  void *arg){
     // Verifico pegadinhas do prof.
     if (task == NULL){
         perror ("Erro na criação da tarefa\n");
@@ -265,7 +257,7 @@ int task_create (task_t *task, void (*start_routine)(void *),  void *arg){
             exit(-1);        
         }
     }
-
+    taskNumber++;
     return (task->id);
 }
 
@@ -293,6 +285,7 @@ void task_exit(int exitCode){
         free (dispatcher.context.uc_stack.ss_sp);
         return;
     }
+    taskNumber--;
     task_switch(&dispatcher);
 }
 
@@ -316,7 +309,7 @@ int task_switch(task_t *task){
 }
 
 // A chamada task_join(b) faz com que a tarefa atual seja suspensa até a conclusão da tarefa b
-int task_join (task_t *task){
+int task_join(task_t *task){
     if (task == NULL){
         return -1;
     }
@@ -327,7 +320,7 @@ int task_join (task_t *task){
     return(currentTask->exit_code);
 }
 
-void task_suspend (task_t **queue){
+void task_suspend(task_t **queue){
     // remove da tarefa corrente (caso esteja lá) e insere na fila de adormecida
     queue_remove((queue_t **) &readyQueue, (queue_t *) currentTask);
     currentTask->status = 2;
@@ -339,7 +332,7 @@ void task_suspend (task_t **queue){
     task_switch(&dispatcher);
 }
 
-void task_resume (task_t * task, task_t **queue){
+void task_resume(task_t * task, task_t **queue){
     // remove da queue de adormecida e devolve à de prontos
     if (queue_remove((queue_t **) queue, (queue_t *) task) < 0){
         perror ("Erro ao remover tarefa na fila de suspensas em task_exit\n");
@@ -353,17 +346,99 @@ void task_resume (task_t * task, task_t **queue){
     }
 }
 
-void task_sleep (int t){
+void task_sleep(int t){
 	currentTask->status = 2;
     currentTask->wakeup_time = systime() + t;
     
-    if (queue_remove((queue_t **)&readyQueue, (queue_t *)currentTask) < 0){
-        // perror ("Erro ao adicionar tarefa na fila a mimir\n");
-        // exit(-1);        
-    }
+    queue_remove((queue_t **)&readyQueue, (queue_t *)currentTask);
+    
     if (queue_append((queue_t **)&sleepQueue, (queue_t *)currentTask) < 0){
         perror ("Erro ao adicionar tarefa na fila a mimir\n");
         exit(-1);        
     }
     task_switch(&dispatcher);
+}
+
+
+//--------------------------------------------- Semáforos --------------------------------------------------
+// Inicializa um semáforo apontado por s com o valor inicial value e uma fila vazia.
+int sem_create(semaphore_t *s, int value){
+    s->s_queue = NULL;
+    s->s_counter = value;
+    // double-check
+    if(s->s_counter == value)
+        return 0;
+    return -1;
+}
+/*
+    Realiza a operação Down no semáforo apontado por s. Esta chamada pode ser bloqueante: caso o contador do semáforo seja negativo, 
+    a tarefa corrente é suspensa, inserida no final da fila do semáforo e a execução volta ao dispatcher; caso contrário, a tarefa 
+    continua a executar sem ser suspensa.
+
+    Se a tarefa for bloqueada, ela será reativada quando uma outra tarefa liberar o semáforo (através da operação sem_up) ou caso o 
+    semáforo seja destruído (operação sem_destroy)
+*/
+int sem_down(semaphore_t *s){
+	if(s == NULL)
+        return -1;
+    // operação atômica de subtração
+    if( __sync_sub_and_fetch(&(s->s_counter), 1) < 0){
+        currentTask->status = 2;    // 2: suspensa
+
+        if (queue_append((queue_t **)&s->s_queue, (queue_t *)currentTask) < 0){
+            perror ("Erro ao inserir tarefa na fila do semáforo\n");
+            exit(-1);        
+        }
+        task_switch(&dispatcher);
+    } 
+    return 0;
+}
+
+/*
+    Realiza a operação Up no semáforo apontado por s. Esta chamada não é bloqueante (a tarefa que a executa não perde o processador). 
+    Se houverem tarefas aguardando na fila do semáforo, a primeira da fila deve ser acordada e retornar à fila de tarefas prontas. 
+*/
+int sem_up(semaphore_t *s){
+	if(s == NULL)
+        return -1;
+
+    __sync_add_and_fetch(&(s->s_counter), 1);
+    // operação atômica de adição
+    if (s->s_queue && s->s_counter <= 0){
+        task_t *aux = s->s_queue;
+	    if (queue_remove((queue_t **) &s->s_queue, (queue_t *) aux) < 0){
+            perror ("Erro ao remover tarefa na fila do semáforo\n");
+            exit(-1);
+        }
+
+        if (queue_append((queue_t **)&readyQueue, (queue_t *) aux) < 0){
+            perror ("Erro ao inserir tarefa na fila de prontas\n");
+            exit(-1);
+        }
+        aux->status = 1; // 1: pronta
+    }
+    
+    return 0;
+}
+
+int sem_destroy(semaphore_t *s){
+    task_t *remove_task;
+    // remove todas as tasks do semáforo e as devolve à fila de prontas
+    while (s->s_queue){
+        remove_task = s->s_queue;
+        if (queue_remove((queue_t **) &s->s_queue, (queue_t *) remove_task) < 0){
+            perror ("Erro ao remover tarefa na fila do semáforo\n");
+            exit(-1);
+        }
+
+        if (queue_append((queue_t **)&readyQueue, (queue_t *) remove_task) < 0){
+            perror ("Erro ao inserir tarefa na fila de prontas\n");
+            exit(-1);
+        }
+    }
+    // double-check
+    if (s->s_queue == NULL)
+        return 0;
+
+    return -1;
 }
