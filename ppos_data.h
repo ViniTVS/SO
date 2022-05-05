@@ -64,6 +64,16 @@ typedef struct
 // estrutura que define uma fila de mensagens
 typedef struct
 {
+  int max_size;
+  int msg_size;
+  int status;
+  int msg_count;
+  void *queue;
+  int head;
+  int tail;
+  semaphore_t s_buffer;
+  semaphore_t s_item;
+  semaphore_t s_vaga;
   // preencher quando necessário
 } mqueue_t ;
 
