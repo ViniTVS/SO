@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <sys/time.h>
+#include <string.h>
 
 //? Definição de constantes próprias
 #define STACKSIZE 64*1024	/* tamanho de pilha das threads (contexts.c)*/
@@ -68,7 +69,7 @@ typedef struct
   int msg_size;
   int status;
   int msg_count;
-  void *queue;
+  void *buffer;
   int head;
   int tail;
   semaphore_t s_buffer;

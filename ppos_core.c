@@ -448,69 +448,84 @@ int sem_destroy(semaphore_t *s){
 // ------------------------------- Filas de mensagens ---------------------------
 
 int mqueue_create (mqueue_t *queue, int msgs, int size) {
-    queue->queue = malloc(msgs*size);
+    queue->buffer = malloc(msgs*size);
     // erro ao alocar memória
-    if(!(queue->queue))
+    if(!(queue->buffer))
         return -1;
-
+    // configurações da queue
     queue->max_size = msgs;
     queue->status = 1;
-    #ifdef DEBUG
-        printf ("queue max size: %d\n", queue->max_size);
-    #endif
     queue->msg_size = size;
     queue->msg_count = 0;
     queue->head = 0;
     queue->tail = 0;
+    #ifdef DEBUG
+        printf("queue max size: %d\n", queue->max_size);
+    #endif
+    // semáforos
     sem_create(&queue->s_item, 0);  
     sem_create(&queue->s_vaga, msgs);    
     sem_create(&queue->s_buffer, 1);
+
     return 0;
 }
 
 int mqueue_send (mqueue_t *queue, void *msg) {
-    if (queue != NULL && queue->status == 1) {
-        sem_down (&queue->s_vaga);
-        sem_down (&queue->s_buffer);
-        memcpy (queue->buffer + (queue->end)*(queue->bytesSize), msg, queue->bytesSize);
-        queue->end = (queue->end + 1) % queue->maxSize;
-        queue->msgActually++;
-        sem_up (&queue->s_buffer);
-        sem_up (&queue->s_item);
-        return 0;
-    }
-    return -1;
+    // status é diferente de 1 -> queue was destroyed
+    if(!(queue->status))
+        return -1;
+
+    // semáforos para evitar racing conditions
+    sem_down(&queue->s_vaga);
+    sem_down(&queue->s_buffer);
+
+    // insere no index final do buffer (tail) * tam da mensagem
+    memcpy(queue->buffer + (queue->tail)*(queue->msg_size), msg, queue->msg_size);
+    // atualiza valores de final do buffer (p/ próxima inserção) e counter de mensagens
+    queue->tail = (queue->tail + 1) % queue->max_size;
+    queue->msg_count++;
+
+    // semáforos voltam
+    sem_up(&queue->s_buffer);
+    sem_up(&queue->s_item);
+    
+    return 0;
 }
 
 int mqueue_recv (mqueue_t *queue, void *msg) {
-    if (queue != NULL && queue->status != NOT_VALID) {
-        sem_down (&queue->s_item);
-        sem_down (&queue->s_buffer);
-        memcpy (msg, queue->buffer + (queue->head)*(queue->bytesSize), queue->bytesSize);
-        queue->head = (queue->head + 1) % queue->maxSize;
-        queue->msgActually--;
-        sem_up (&queue->s_buffer);
-        sem_up (&queue->s_vaga);
-        return 0;
-    }
-    return -1;
+    // status é diferente de 1 -> queue was destroyed
+    if(!(queue->status))
+        return -1;
 
+    // semáforos para evitar racing conditions
+    sem_down (&queue->s_item);
+    sem_down (&queue->s_buffer);
+    // copia do início (head) do buffer * tam da mensagem p/ msg
+    memcpy (msg, queue->buffer + (queue->head)*(queue->msg_size), queue->msg_size);
+    queue->head = (queue->head + 1) % queue->max_size;
+    queue->msg_count--;
+    // semáforos voltam
+    sem_up (&queue->s_buffer);
+    sem_up (&queue->s_vaga);
+
+    return 0;
 }
 
 int mqueue_destroy (mqueue_t *queue) {
-    if (queue != NULL) {
-        queue->status = NOT_VALID;
-        sem_destroy (&queue->s_item);
-        sem_destroy (&queue->s_vaga);
-        sem_destroy (&queue->s_buffer);
-        return 0;
-    }
-    return -1;
+    if (!queue) 
+        return -1;
+    // status passa a ser 0 - "queue destruída"
+    queue->status = 0;
+    // erro ao destruir semáforos
+    if (sem_destroy(&queue->s_item) || sem_destroy(&queue->s_vaga) || sem_destroy(&queue->s_buffer))
+        return -1;
+    return 0;
 }
 
 int mqueue_msgs (mqueue_t *queue) {
-    if (queue != NULL && queue->status != NOT_VALID)
-        return queue->msgActually;
+    if (queue->status)
+        return queue->msg_count;
+    
     return -1;
 }
 
