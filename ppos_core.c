@@ -519,6 +519,7 @@ int mqueue_destroy (mqueue_t *queue) {
     // erro ao destruir semáforos
     if (sem_destroy(&queue->s_item) || sem_destroy(&queue->s_vaga) || sem_destroy(&queue->s_buffer))
         return -1;
+        
     return 0;
 }
 
